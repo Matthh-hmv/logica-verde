@@ -1,3 +1,14 @@
 # Godot 4+ specific ignores
 .godot/
 /android/
+
+# Builds exportados
+export/
+*.exe
+*.pck
+*.apk
+
+# Segredos (senha de email, chaves de API)
+.env
+secrets.*
+*.local.cfg
