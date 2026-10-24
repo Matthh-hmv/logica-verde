@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://tpnyp65ge0tr"
-path="res://.godot/imported/cartaOnibus..png-6048da4027888897efa913c688d0e3bf.ctex"
+uid="uid://d0dx52onb3xcu"
+path="res://.godot/imported/titulo-tabuleiro 1_1.png-336d4d83be3eccff4e87b354e3c09efb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Cartas/cartaOnibus..png"
-dest_files=["res://.godot/imported/cartaOnibus..png-6048da4027888897efa913c688d0e3bf.ctex"]
+source_file="res://Assets/ui/titulo-tabuleiro 1_1.png"
+dest_files=["res://.godot/imported/titulo-tabuleiro 1_1.png-336d4d83be3eccff4e87b354e3c09efb.ctex"]
 
 [params]
 

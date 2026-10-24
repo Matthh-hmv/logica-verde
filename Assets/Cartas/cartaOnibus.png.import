@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://beljl64fda8ti"
-path="res://.godot/imported/estante_vertical_sustentaveis.png-2251f67b3a4a7f2b79fd38a15a5dca6f.ctex"
+uid="uid://cg31b3yledhbe"
+path="res://.godot/imported/cartaOnibus.png-3ae94b78d29bf53617675b8945df3e03.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Fundos e telas/estante_vertical_sustentaveis.png"
-dest_files=["res://.godot/imported/estante_vertical_sustentaveis.png-2251f67b3a4a7f2b79fd38a15a5dca6f.ctex"]
+source_file="res://Assets/Cartas/cartaOnibus.png"
+dest_files=["res://.godot/imported/cartaOnibus.png-3ae94b78d29bf53617675b8945df3e03.ctex"]
 
 [params]
 

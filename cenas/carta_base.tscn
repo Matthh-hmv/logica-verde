@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://d0dqs0yg7s6w4"]
+
+[ext_resource type="Script" uid="uid://dpf3ak74fgikk" path="res://scripts/carta_base.gd" id="1_11otk"]
+[ext_resource type="Texture2D" uid="uid://4ec0fyn7b78w" path="res://Assets/Cartas/versoCarta.png" id="2_11otk"]
+[ext_resource type="Texture2D" uid="uid://dblip7uevvxt4" path="res://Assets/Cartas/cartaCarro.png" id="2_rnw6j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e2ube"]
+size = Vector2(796.0002, 1034.0002)
+
+[sub_resource type="Animation" id="Animation_11otk"]
+resource_name = "escondeCarta"
+length = 0.5
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TexturaFrente:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1e-05, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TexturaAtras:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.25, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_rnw6j"]
+resource_name = "mostraCarta"
+length = 0.5
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TexturaFrente:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.25, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TexturaAtras:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1e-05, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_neyve"]
+_data = {
+&"escondeCarta": SubResource("Animation_11otk"),
+&"mostraCarta": SubResource("Animation_rnw6j")
+}
+
+[node name="CartaBase" type="Area2D" unique_id=1900686051]
+script = ExtResource("1_11otk")
+
+[node name="Colisão" type="CollisionShape2D" parent="." unique_id=1451870887]
+position = Vector2(-0.99999774, -1.9999847)
+scale = Vector2(0.99999976, 0.99999976)
+shape = SubResource("RectangleShape2D_e2ube")
+
+[node name="TexturaFrente" type="Sprite2D" parent="." unique_id=706793283]
+scale = Vector2(1e-05, 1)
+texture = ExtResource("2_rnw6j")
+
+[node name="TexturaAtras" type="Sprite2D" parent="." unique_id=1494013413]
+texture = ExtResource("2_11otk")
+
+[node name="Anim" type="AnimationPlayer" parent="." unique_id=871855861]
+libraries/ = SubResource("AnimationLibrary_neyve")

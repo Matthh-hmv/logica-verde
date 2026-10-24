@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://gy8ewridyjut"]
+
+[ext_resource type="Texture2D" uid="uid://ctgijae5o7blq" path="res://Assets/Fundos e telas/Fase 1_1.png" id="1_va754"]
+
+[node name="Fase 1_1" type="Node2D" unique_id=1262477397]
+
+[node name="Fundo" type="CanvasLayer" parent="." unique_id=8844106]
+layer = -1
+
+[node name="TextureRect" type="TextureRect" parent="Fundo" unique_id=971805676]
+offset_left = 6.0
+offset_top = -9.0
+offset_right = 1926.0
+offset_bottom = 1071.0
+texture = ExtResource("1_va754")

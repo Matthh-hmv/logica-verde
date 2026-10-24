@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dco6gsjmr5y7g"
-path="res://.godot/imported/cartaMoto..png-ce78b42176235da7b23660441c6aefa9.ctex"
+uid="uid://11h5wksrbk8n"
+path="res://.godot/imported/cartaMoto.png-eef1fbebfee70dd46b04b1daa7f9c9a6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Cartas/cartaMoto..png"
-dest_files=["res://.godot/imported/cartaMoto..png-ce78b42176235da7b23660441c6aefa9.ctex"]
+source_file="res://Assets/Cartas/cartaMoto.png"
+dest_files=["res://.godot/imported/cartaMoto.png-eef1fbebfee70dd46b04b1daa7f9c9a6.ctex"]
 
 [params]
 

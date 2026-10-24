@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bv4npy4b8khuo"
-path="res://.godot/imported/cartaBicicleta..png-035e5b21439004bb4c28e46a62430ee1.ctex"
+uid="uid://dblip7uevvxt4"
+path="res://.godot/imported/cartaCarro.png-167a23a8b874ef9c6bd02b1b10cfaa30.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Cartas/cartaBicicleta..png"
-dest_files=["res://.godot/imported/cartaBicicleta..png-035e5b21439004bb4c28e46a62430ee1.ctex"]
+source_file="res://Assets/Cartas/cartaCarro.png"
+dest_files=["res://.godot/imported/cartaCarro.png-167a23a8b874ef9c6bd02b1b10cfaa30.ctex"]
 
 [params]
 

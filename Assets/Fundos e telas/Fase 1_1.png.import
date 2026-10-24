@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjmrp8lxvkcg1"
-path="res://.godot/imported/cartaCarro..png-cf69d4d783234d3ca5ca1884984f0b38.ctex"
+uid="uid://ctgijae5o7blq"
+path="res://.godot/imported/Fase 1_1.png-40e86294701bd2570dac7366c84bcf62.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Cartas/cartaCarro..png"
-dest_files=["res://.godot/imported/cartaCarro..png-cf69d4d783234d3ca5ca1884984f0b38.ctex"]
+source_file="res://Assets/Fundos e telas/Fase 1_1.png"
+dest_files=["res://.godot/imported/Fase 1_1.png-40e86294701bd2570dac7366c84bcf62.ctex"]
 
 [params]
 

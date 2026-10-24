@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://djdvo1mfilg5o"
-path="res://.godot/imported/cartaCanecal.png-277bf1d518ea65fa9fdf7bda993906d1.ctex"
+uid="uid://dowem4tyw1l5l"
+path="res://.godot/imported/cartaCaneca.png-2edeb8fcadd3cfd3b996c1d4b5be52d6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Cartas/cartaCanecal.png"
-dest_files=["res://.godot/imported/cartaCanecal.png-277bf1d518ea65fa9fdf7bda993906d1.ctex"]
+source_file="res://Assets/Cartas/cartaCaneca.png"
+dest_files=["res://.godot/imported/cartaCaneca.png-2edeb8fcadd3cfd3b996c1d4b5be52d6.ctex"]
 
 [params]
 
