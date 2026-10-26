@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://btlmvi375ayuw"]
+
+[ext_resource type="Script" uid="uid://b801cnqrki26i" path="res://scripts/tabuleiroMemoria.gd" id="1_o7njt"]
+[ext_resource type="Texture2D" uid="uid://co48q5gs7j6n6" path="res://Assets/Cartas/TabuleiroVazio.png" id="2_4eyu8"]
+
+[node name="Tabuleiro" type="Node2D" unique_id=147842450]
+script = ExtResource("1_o7njt")
+metadata/_edit_vertical_guides_ = [960.0]
+metadata/_edit_horizontal_guides_ = [540.0]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1862421625]
+layer = -1
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1129147994]
+offset_left = 433.0
+offset_top = 276.0
+offset_right = 1482.0
+offset_bottom = 803.0
+texture = ExtResource("2_4eyu8")

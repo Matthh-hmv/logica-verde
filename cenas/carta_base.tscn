@@ -72,6 +72,7 @@ _data = {
 }
 
 [node name="CartaBase" type="Area2D" unique_id=1900686051]
+position = Vector2(405, 525)
 script = ExtResource("1_11otk")
 
 [node name="Colisão" type="CollisionShape2D" parent="." unique_id=1451870887]
@@ -80,10 +81,10 @@ scale = Vector2(0.99999976, 0.99999976)
 shape = SubResource("RectangleShape2D_e2ube")
 
 [node name="TexturaFrente" type="Sprite2D" parent="." unique_id=706793283]
-scale = Vector2(1e-05, 1)
 texture = ExtResource("2_rnw6j")
 
 [node name="TexturaAtras" type="Sprite2D" parent="." unique_id=1494013413]
+scale = Vector2(1e-05, 1)
 texture = ExtResource("2_11otk")
 
 [node name="Anim" type="AnimationPlayer" parent="." unique_id=871855861]
