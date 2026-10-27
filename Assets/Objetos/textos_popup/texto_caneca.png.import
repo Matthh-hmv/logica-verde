@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnu2fntgcfx8"
-path="res://.godot/imported/Garrafa de agua de plastico.png-4b67301155fb5ebd004319b19f51210a.ctex"
+uid="uid://cnp1fweulld60"
+path="res://.godot/imported/texto_caneca.png-99688e831d17fb8485dc9c02301c34db.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Objetos/Garrafa de agua de plastico.png"
-dest_files=["res://.godot/imported/Garrafa de agua de plastico.png-4b67301155fb5ebd004319b19f51210a.ctex"]
+source_file="res://Assets/Objetos/textos_popup/texto_caneca.png"
+dest_files=["res://.godot/imported/texto_caneca.png-99688e831d17fb8485dc9c02301c34db.ctex"]
 
 [params]
 

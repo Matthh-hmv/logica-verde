@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://blppk5iepxjsi"
-path="res://.godot/imported/sacola de plastico.png-5a3e74de90422bda878592ffa9ac7bf5.ctex"
+uid="uid://b8vui4ah28meh"
+path="res://.godot/imported/texto_garrafa_reutilizavel.png-4ffb2e323c2a68289fb7f65ae978bca5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Objetos/sacola de plastico.png"
-dest_files=["res://.godot/imported/sacola de plastico.png-5a3e74de90422bda878592ffa9ac7bf5.ctex"]
+source_file="res://Assets/Objetos/textos_popup/texto_garrafa_reutilizavel.png"
+dest_files=["res://.godot/imported/texto_garrafa_reutilizavel.png-4ffb2e323c2a68289fb7f65ae978bca5.ctex"]
 
 [params]
 

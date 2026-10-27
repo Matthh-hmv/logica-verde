@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://be3sum5mgl7el"
-path="res://.godot/imported/copo plástico.png-c81d259d9b2f18cb4a622c3cd71c52e4.ctex"
+uid="uid://c32v1diimyeoe"
+path="res://.godot/imported/texto_moto.png-eb2dfed2404cd60cfe868234b80a12e8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Objetos/copo plástico.png"
-dest_files=["res://.godot/imported/copo plástico.png-c81d259d9b2f18cb4a622c3cd71c52e4.ctex"]
+source_file="res://Assets/Objetos/textos_popup/texto_moto.png"
+dest_files=["res://.godot/imported/texto_moto.png-eb2dfed2404cd60cfe868234b80a12e8.ctex"]
 
 [params]
 

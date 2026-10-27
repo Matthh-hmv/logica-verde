@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://cypxggvp73t1t"]
+
+[ext_resource type="Script" uid="uid://dr0ar2pkb65me" path="res://scripts/pop_up_objetos.gd" id="1_wi5jm"]
+[ext_resource type="Texture2D" uid="uid://6gqkv4sxvffm" path="res://Assets/Fundos e telas/tela_preta_1920x1080.png" id="2_fy1y3"]
+[ext_resource type="Texture2D" uid="uid://cvqqpboe47sl7" path="res://Assets/ui/Popup Jogo da memória.png" id="3_o5fxh"]
+[ext_resource type="Texture2D" uid="uid://ds4btiht56xvc" path="res://Assets/Objetos/carro.png" id="4_38606"]
+[ext_resource type="Texture2D" uid="uid://btreccdgvv403" path="res://Assets/Objetos/textos_popup/texto_carro.png" id="5_cjl2n"]
+
+[sub_resource type="Animation" id="Animation_wi5jm"]
+resource_name = "abrirPopUp"
+step = 0.1
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fy1y3"]
+_data = {
+&"abrirPopUp": SubResource("Animation_wi5jm")
+}
+
+[node name="PopUP" type="Area2D" unique_id=873226036]
+script = ExtResource("1_wi5jm")
+
+[node name="Fundo" type="Sprite2D" parent="." unique_id=1368007168]
+position = Vector2(961, 542)
+texture = ExtResource("2_fy1y3")
+
+[node name="PopUp" type="Sprite2D" parent="." unique_id=68945529]
+position = Vector2(960, 435)
+texture = ExtResource("3_o5fxh")
+
+[node name="Objeto" type="Sprite2D" parent="." unique_id=674993365]
+position = Vector2(960, 435)
+texture = ExtResource("4_38606")
+
+[node name="Texto" type="Sprite2D" parent="." unique_id=1288942425]
+position = Vector2(960, 925)
+texture = ExtResource("5_cjl2n")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1079725971]
+libraries/ = SubResource("AnimationLibrary_fy1y3")
