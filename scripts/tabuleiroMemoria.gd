@@ -1,6 +1,7 @@
 extends Node2D
 class_name TabuleiroMemoria
 
+const POPUP := preload("res://cenas/pop_up.tscn")
 const CARTACENA:= preload("res://cenas/carta_base.tscn")
 
 var colunas:int = 5 #colunas das cartas
@@ -94,6 +95,10 @@ func comparaTimeout() -> void:
 	if a.id == b.id:
 		a.par()
 		b.par()
+		var popup: popUpBase = POPUP.instantiate()
+		add_child(popup)
+		await popup.mostraPopUp(a.id)
+		popup.queue_free()
 	else:
 		a.fechada()
 		b.fechada()

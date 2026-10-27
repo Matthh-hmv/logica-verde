@@ -43,7 +43,6 @@ func setTextura(newId:int) -> void:
 	
 func setTexturaId() -> void: #muda a textura da carta
 	if not listaTexturaNaoRenovaveis.has(id):
-		print("Nao achou o id")
 		return
 	textura_frente.texture = load(listaTexturaNaoRenovaveis[id])
 	
