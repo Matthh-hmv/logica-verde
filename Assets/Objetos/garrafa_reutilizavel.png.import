@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bhmqn0mh0ek72"
-path="res://.godot/imported/garrafa_reutilizavel_pixelart.png-7e6d050d34a7228f9ded64c6f0787cdd.ctex"
+path="res://.godot/imported/garrafa_reutilizavel.png-8a5b231f10b4a82e15a1e85c7de8521d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Objetos/garrafa_reutilizavel_pixelart.png"
-dest_files=["res://.godot/imported/garrafa_reutilizavel_pixelart.png-7e6d050d34a7228f9ded64c6f0787cdd.ctex"]
+source_file="res://Assets/Objetos/garrafa_reutilizavel.png"
+dest_files=["res://.godot/imported/garrafa_reutilizavel.png-8a5b231f10b4a82e15a1e85c7de8521d.ctex"]
 
 [params]
 

@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dkvujxfx1ujg6"]
+
+[ext_resource type="Texture2D" uid="uid://6ly2s24fqpie" path="res://Assets/Fundos e telas/Fase 1_2.png" id="1_iox61"]
+[ext_resource type="PackedScene" uid="uid://btlmvi375ayuw" path="res://cenas/tabuleiroMemoria.tscn" id="3_6je4f"]
+
+[node name="fase 1_2" type="Node2D" unique_id=539166240]
+
+[node name="Fundo" type="CanvasLayer" parent="." unique_id=1338218335]
+layer = -1
+
+[node name="TextureRect" type="TextureRect" parent="Fundo" unique_id=1826424496]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("1_iox61")
+metadata/_edit_use_anchors_ = true
+
+[node name="Tabuleiro" parent="." unique_id=147842450 instance=ExtResource("3_6je4f")]
+nivel = 2

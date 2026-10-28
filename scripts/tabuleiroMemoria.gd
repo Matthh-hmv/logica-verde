@@ -1,5 +1,6 @@
 extends Node2D
 class_name TabuleiroMemoria
+@export var nivel: int = 1
 
 const POPUP := preload("res://cenas/pop_up.tscn")
 const CARTACENA:= preload("res://cenas/carta_base.tscn")
@@ -10,6 +11,7 @@ var espacamentoCarta: = Vector2(200, 235) #espaçamento entre as cartas
 
 var cartaSelecionada:Array[CartaBase] = []
 var lockInput:bool = false
+var acertos:int = 0
 
 var comparaCarta:Timer
 var comparaDelay:float = 0.6
@@ -33,7 +35,7 @@ func criaTabuleiro() -> void:
 				
 			var carta: CartaBase = CARTACENA.instantiate()	
 			add_child(carta)	
-			carta.setTextura(pares[index])
+			carta.setTextura(pares[index], nivel)
 			index += 1
 			carta.scale = Vector2(0.2, 0.2)
 			carta.position = Vector2(
@@ -91,18 +93,24 @@ func comparaTimeout() -> void:
 	
 	var a:= cartaSelecionada[0]
 	var b:= cartaSelecionada[1]	
-	
+	var popup: popUpBase = POPUP.instantiate()
+	add_child(popup)
 	if a.id == b.id:
 		a.par()
 		b.par()
-		var popup: popUpBase = POPUP.instantiate()
-		add_child(popup)
-		await popup.mostraPopUp(a.id)
-		popup.queue_free()
+		acertos += 1
+		await popup.mostraPopUp(a.id, nivel)
+		if acertos == 5:
+			await popup.finalizaMemoria()
+			if nivel == 1:
+				get_tree().change_scene_to_file("res://cenas/fase_1_2.tscn")
+		#else:
+			#vai entrar a fase 3
 	else:
 		a.fechada()
 		b.fechada()
-	
+		await popup.erroPar()
+	popup.queue_free()
 	cartaSelecionada.clear()
 	lockInput = false
 	

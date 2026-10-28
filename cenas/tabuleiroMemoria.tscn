@@ -5,6 +5,7 @@
 
 [node name="Tabuleiro" type="Node2D" unique_id=147842450]
 script = ExtResource("1_o7njt")
+nivel = null
 metadata/_edit_vertical_guides_ = [960.0]
 metadata/_edit_horizontal_guides_ = [540.0]
 

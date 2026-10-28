@@ -12,5 +12,7 @@ layer = -1
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("1_va754")
+metadata/_edit_use_anchors_ = true
 
 [node name="Tabuleiro" parent="." unique_id=147842450 instance=ExtResource("2_x7jwy")]
+nivel = 1

@@ -5,7 +5,27 @@
 [ext_resource type="Texture2D" uid="uid://cvqqpboe47sl7" path="res://Assets/ui/Popup Jogo da memória.png" id="3_o5fxh"]
 [ext_resource type="Texture2D" uid="uid://ds4btiht56xvc" path="res://Assets/Objetos/carro.png" id="4_38606"]
 [ext_resource type="Texture2D" uid="uid://btreccdgvv403" path="res://Assets/Objetos/textos_popup/texto_carro.png" id="5_cjl2n"]
+[ext_resource type="Texture2D" uid="uid://bnstbj20gtmgj" path="res://Assets/Objetos/textos_popup/texto_erro_par.png" id="6_38606"]
 [ext_resource type="Texture2D" uid="uid://c67ugeljdks1m" path="res://Assets/ui/botao - voltar.png" id="6_fy1y3"]
+[ext_resource type="Texture2D" uid="uid://cshpgr3goy4ht" path="res://Assets/Objetos/textos_popup/texto_parabens.png" id="7_cjl2n"]
+[ext_resource type="Texture2D" uid="uid://g753jhjrax45" path="res://Assets/ui/botao_voltar_pressionado.png" id="7_o5fxh"]
+
+[sub_resource type="Animation" id="Animation_cjl2n"]
+resource_name = "abreErro"
+length = 0.5
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Erro:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_wi5jm"]
 resource_name = "abrePopUp"
@@ -60,6 +80,39 @@ tracks/3/keys = {
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
+[sub_resource type="Animation" id="Animation_8qwht"]
+resource_name = "abreVitoria"
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TérminoDeFase:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_h4cv4"]
+resource_name = "fechaErro"
+length = 0.5
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Erro:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
 [sub_resource type="Animation" id="Animation_fy1y3"]
 resource_name = "fechaPopUp"
 step = 0.1
@@ -112,31 +165,65 @@ tracks/3/keys = {
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_3pcml"]
+resource_name = "fechaVitoria"
+length = 0.5
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TérminoDeFase:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_fy1y3"]
 _data = {
+&"abreErro": SubResource("Animation_cjl2n"),
 &"abrePopUp": SubResource("Animation_wi5jm"),
-&"fechaPopUp": SubResource("Animation_fy1y3")
+&"abreVitoria": SubResource("Animation_8qwht"),
+&"fechaErro": SubResource("Animation_h4cv4"),
+&"fechaPopUp": SubResource("Animation_fy1y3"),
+&"fechaVitoria": SubResource("Animation_3pcml")
 }
 
 [node name="PopUP" type="Area2D" unique_id=873226036]
 script = ExtResource("1_wi5jm")
 
 [node name="Fundo" type="Sprite2D" parent="." unique_id=1368007168]
-modulate = Color(1, 1, 1, 0.50980395)
+modulate = Color(1, 1, 1, 0)
 position = Vector2(960, 540)
 texture = ExtResource("2_fy1y3")
 
 [node name="PopUp" type="Sprite2D" parent="." unique_id=68945529]
+modulate = Color(1, 1, 1, 0)
 position = Vector2(960, 435)
 texture = ExtResource("3_o5fxh")
 
 [node name="Objeto" type="Sprite2D" parent="." unique_id=674993365]
+modulate = Color(1, 1, 1, 0)
 position = Vector2(960, 435)
 texture = ExtResource("4_38606")
 
 [node name="Texto" type="Sprite2D" parent="." unique_id=1288942425]
+modulate = Color(1, 1, 1, 0)
 position = Vector2(960, 925)
 texture = ExtResource("5_cjl2n")
+
+[node name="Erro" type="Sprite2D" parent="." unique_id=493233051]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(960, 925)
+texture = ExtResource("6_38606")
+
+[node name="TérminoDeFase" type="Sprite2D" parent="." unique_id=156684299]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(960, 925)
+texture = ExtResource("7_cjl2n")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1079725971]
 libraries/ = SubResource("AnimationLibrary_fy1y3")
@@ -147,5 +234,6 @@ offset_top = 871.0
 offset_right = 1472.6057
 offset_bottom = 972.0
 texture_normal = ExtResource("6_fy1y3")
+texture_pressed = ExtResource("7_o5fxh")
 stretch_mode = 0
 flip_h = true
