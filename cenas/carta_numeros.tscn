@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://ch6s6gumgin82"]
+
+[ext_resource type="Texture2D" uid="uid://c5lquyxfg5vte" path="res://Assets/cartas fase 3/numero_1.png" id="1_8x7mu"]
+[ext_resource type="Script" uid="uid://ckc4pq5yhtv5c" path="res://scripts/cartaNumeros.gd" id="1_11v0h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e2ube"]
+size = Vector2(244, 222)
+
+[node name="CartaNumeros" type="Area2D" unique_id=1721261340]
+script = ExtResource("1_11v0h")
+
+[node name="TexturaFrente" type="Sprite2D" parent="." unique_id=194447980]
+texture = ExtResource("1_8x7mu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1083422543]
+shape = SubResource("RectangleShape2D_e2ube")

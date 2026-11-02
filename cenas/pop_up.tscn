@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cypxggvp73t1t"]
 
-[ext_resource type="Script" uid="uid://dr0ar2pkb65me" path="res://scripts/pop_up_objetos.gd" id="1_wi5jm"]
+[ext_resource type="Script" uid="uid://dr0ar2pkb65me" path="res://scripts/Fase1Nivel1e2/popUpObjetos.gd" id="1_wi5jm"]
 [ext_resource type="Texture2D" uid="uid://6gqkv4sxvffm" path="res://Assets/Fundos e telas/tela_preta_1920x1080.png" id="2_fy1y3"]
 [ext_resource type="Texture2D" uid="uid://cvqqpboe47sl7" path="res://Assets/ui/Popup Jogo da memória.png" id="3_o5fxh"]
 [ext_resource type="Texture2D" uid="uid://ds4btiht56xvc" path="res://Assets/Objetos/carro.png" id="4_38606"]

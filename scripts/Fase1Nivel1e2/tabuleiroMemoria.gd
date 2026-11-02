@@ -3,7 +3,7 @@ class_name TabuleiroMemoria
 @export var nivel: int = 1
 
 const POPUP := preload("res://cenas/pop_up.tscn")
-const CARTACENA:= preload("res://cenas/carta_base.tscn")
+const CARTACENA:= preload("res://cenas/fase 1.1 e 1.2/carta_base.tscn")
 
 var colunas:int = 5 #colunas das cartas
 var linhas:int = 2 #linhas das cartas 

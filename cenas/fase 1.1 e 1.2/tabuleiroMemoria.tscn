@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://btlmvi375ayuw"]
 
-[ext_resource type="Script" uid="uid://b801cnqrki26i" path="res://scripts/tabuleiroMemoria.gd" id="1_o7njt"]
+[ext_resource type="Script" uid="uid://b801cnqrki26i" path="res://scripts/Fase1Nivel1e2/tabuleiroMemoria.gd" id="1_o7njt"]
 [ext_resource type="Texture2D" uid="uid://co48q5gs7j6n6" path="res://Assets/Cartas/TabuleiroVazio.png" id="2_4eyu8"]
 
 [node name="Tabuleiro" type="Node2D" unique_id=147842450]

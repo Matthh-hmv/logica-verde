@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://ckoory7s6kvrp"]
+
+[ext_resource type="PackedScene" uid="uid://br0mljvevoaur" path="res://cenas/tabuleiro_quantidade.tscn" id="1_4h7ms"]
+[ext_resource type="Texture2D" uid="uid://dksrbhtk7i1ml" path="res://Assets/Fundos e telas/Fase 1_3.png" id="1_lmkoj"]
+
+[node name="fase 1_3" type="Node2D" unique_id=1681988601]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=664899506]
+layer = -1
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=1396254190]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_lmkoj")
+
+[node name="tabuleiroQuantidade" parent="." unique_id=1306765489 instance=ExtResource("1_4h7ms")]
