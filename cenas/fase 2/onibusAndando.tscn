@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://c4t1k47335bv3"]
+
+[ext_resource type="Script" uid="uid://mfg4e3yhd2xq" path="res://cenas/fase 2/fase2.gd" id="1_by1qn"]
+[ext_resource type="Texture2D" uid="uid://chaeu7ermdj14" path="res://Assets/Fundos e telas/Fase 2.png" id="2_8pw2g"]
+[ext_resource type="Texture2D" uid="uid://blif2dpwmvoe8" path="res://Assets/Objetos/onibus.png" id="3_j76v4"]
+
+[node name="OnibusAndando" type="Node2D" unique_id=1645025465 node_paths=PackedStringArray("caminho")]
+script = ExtResource("1_by1qn")
+caminho = [NodePath("posicao0"), NodePath("posicao1"), NodePath("posicaoA1"), NodePath("posicaoV1"), NodePath("posicao4"), NodePath("posicaoA2"), NodePath("posicaoV2"), NodePath("posicao7"), NodePath("posicaoA3"), NodePath("posicao9")]
+
+[node name="Fase2" type="Sprite2D" parent="." unique_id=485120703]
+position = Vector2(962, 539)
+texture = ExtResource("2_8pw2g")
+
+[node name="posicao0" type="Marker2D" parent="." unique_id=1919915544]
+position = Vector2(339, 846)
+gizmo_extents = 49.0
+
+[node name="posicao1" type="Marker2D" parent="." unique_id=901691661]
+position = Vector2(469, 846)
+gizmo_extents = 49.0
+
+[node name="posicaoA1" type="Marker2D" parent="." unique_id=1584079739]
+position = Vector2(599, 846)
+gizmo_extents = 49.0
+
+[node name="posicaoV1" type="Marker2D" parent="." unique_id=2117135622]
+position = Vector2(598, 715)
+gizmo_extents = 49.0
+
+[node name="posicao4" type="Marker2D" parent="." unique_id=963801944]
+position = Vector2(599, 585)
+gizmo_extents = 49.0
+
+[node name="posicaoA2" type="Marker2D" parent="." unique_id=1611226579]
+position = Vector2(596, 458)
+gizmo_extents = 49.0
+
+[node name="posicaoV2" type="Marker2D" parent="." unique_id=1279967516]
+position = Vector2(728, 456)
+gizmo_extents = 49.0
+
+[node name="posicao7" type="Marker2D" parent="." unique_id=1611998842]
+position = Vector2(728, 327)
+gizmo_extents = 49.0
+
+[node name="posicaoA3" type="Marker2D" parent="." unique_id=190556139]
+position = Vector2(727, 198)
+gizmo_extents = 49.0
+
+[node name="posicao9" type="Marker2D" parent="." unique_id=485659946]
+position = Vector2(857, 195)
+gizmo_extents = 49.0
+
+[node name="Onibus" type="Sprite2D" parent="." unique_id=1225309113]
+position = Vector2(339, 846.00006)
+scale = Vector2(0.32421875, 0.32421875)
+texture = ExtResource("3_j76v4")
