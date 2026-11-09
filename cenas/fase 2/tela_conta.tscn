@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bu7twqwjbuvfo"]
+
+[ext_resource type="Texture2D" uid="uid://dmuo8fly85ils" path="res://Assets/Fundos e telas/Fase 2/Fase 2.1 - conta.png" id="1_lvnt3"]
+
+[node name="Node2D" type="Node2D" unique_id=681282532]
+
+[node name="Fase2_1Conta" type="Sprite2D" parent="." unique_id=1552737556]
+position = Vector2(968, 552)
+texture = ExtResource("1_lvnt3")

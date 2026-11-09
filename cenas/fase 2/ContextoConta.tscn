@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dmsc0qe6nfqwi"]
+
+[ext_resource type="Texture2D" uid="uid://bqkpi1opjjs48" path="res://Assets/Fundos e telas/Fase 2/Fase 2.1 - contexto.png" id="1_wlqud"]
+
+[node name="Node2D" type="Node2D" unique_id=103594792]
+
+[node name="Fase2_1Contexto" type="Sprite2D" parent="." unique_id=1845259444]
+position = Vector2(960, 536)
+texture = ExtResource("1_wlqud")
+
+[node name="Prosseguir" type="Button" parent="Fase2_1Contexto" unique_id=290792368]
+offset_left = 368.0
+offset_top = 240.0
+offset_right = 896.0
+offset_bottom = 376.0

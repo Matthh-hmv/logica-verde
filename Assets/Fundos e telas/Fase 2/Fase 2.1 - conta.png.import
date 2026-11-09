@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://chaeu7ermdj14"
-path="res://.godot/imported/Fase 2.png-fb2e8fa666fe4e123425b7873e7d1948.ctex"
+uid="uid://dmuo8fly85ils"
+path="res://.godot/imported/Fase 2.1 - conta.png-f5b3730b829c827901196519e4e99034.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Fundos e telas/Fase 2.png"
-dest_files=["res://.godot/imported/Fase 2.png-fb2e8fa666fe4e123425b7873e7d1948.ctex"]
+source_file="res://Assets/Fundos e telas/Fase 2/Fase 2.1 - conta.png"
+dest_files=["res://.godot/imported/Fase 2.1 - conta.png-f5b3730b829c827901196519e4e99034.ctex"]
 
 [params]
 

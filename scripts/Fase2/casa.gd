@@ -13,3 +13,11 @@ func _ready() -> void:
 	if baixo: baixo.cima = self
 	if esquerda: esquerda.direita = self
 	if direita: direita.esquerda = self
+
+enum Tipo { NORMAL, AZUL, VERMELHA }
+@export var tipo: Tipo = Tipo.NORMAL
+var completada := false
+
+func completar() -> void:
+	completada = true
+	$Estrela.modulate = Color.WHITE   # estrela fica colorida
