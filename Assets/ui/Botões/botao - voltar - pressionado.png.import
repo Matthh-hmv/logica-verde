@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dooslofhg2v3d"
-path="res://.godot/imported/botao - Alto falante.png-96bd586f96e9e882af2b00858e174177.ctex"
+uid="uid://g753jhjrax45"
+path="res://.godot/imported/botao - voltar - pressionado.png-e69b509c79eadbc560e116cf20c3a5c5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ui/botao - Alto falante.png"
-dest_files=["res://.godot/imported/botao - Alto falante.png-96bd586f96e9e882af2b00858e174177.ctex"]
+source_file="res://Assets/ui/Botões/botao - voltar - pressionado.png"
+dest_files=["res://.godot/imported/botao - voltar - pressionado.png-e69b509c79eadbc560e116cf20c3a5c5.ctex"]
 
 [params]
 

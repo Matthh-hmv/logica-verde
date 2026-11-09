@@ -6,9 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://ds4btiht56xvc" path="res://Assets/Objetos/carro.png" id="4_38606"]
 [ext_resource type="Texture2D" uid="uid://btreccdgvv403" path="res://Assets/Objetos/textos_popup/texto_carro.png" id="5_cjl2n"]
 [ext_resource type="Texture2D" uid="uid://bnstbj20gtmgj" path="res://Assets/Objetos/textos_popup/texto_erro_par.png" id="6_38606"]
-[ext_resource type="Texture2D" uid="uid://c67ugeljdks1m" path="res://Assets/ui/botao - voltar.png" id="6_fy1y3"]
+[ext_resource type="Texture2D" uid="uid://c67ugeljdks1m" path="res://Assets/ui/Botões/botao - voltar.png" id="6_fy1y3"]
 [ext_resource type="Texture2D" uid="uid://cshpgr3goy4ht" path="res://Assets/Objetos/textos_popup/texto_parabens.png" id="7_cjl2n"]
-[ext_resource type="Texture2D" uid="uid://g753jhjrax45" path="res://Assets/ui/botao_voltar_pressionado.png" id="7_o5fxh"]
+[ext_resource type="Texture2D" uid="uid://g753jhjrax45" path="res://Assets/ui/Botões/botao - voltar - pressionado.png" id="7_o5fxh"]
 
 [sub_resource type="Animation" id="Animation_cjl2n"]
 resource_name = "abreErro"

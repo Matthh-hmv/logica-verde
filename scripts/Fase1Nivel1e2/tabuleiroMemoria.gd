@@ -15,7 +15,7 @@ var acertos:int = 0
 
 var comparaCarta:Timer
 var comparaDelay:float = 0.6
-
+	
 func _ready() -> void:
 	criaTabuleiro()
 	setupTimer()
@@ -103,9 +103,9 @@ func comparaTimeout() -> void:
 		if acertos == 5:
 			await popup.finalizaMemoria()
 			if nivel == 1:
-				get_tree().change_scene_to_file("res://cenas/fase_1_2.tscn")
-		#else:
-			#vai entrar a fase 3
+				Navegacao.irPara("res://cenas/fase 1.1 e 1.2/fase_1_2.tscn")
+			else:
+				Navegacao.irPara("res://cenas/fase 1.3/fase_1_3.tscn")
 	else:
 		a.fechada()
 		b.fechada()

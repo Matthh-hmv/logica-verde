@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://br0mljvevoaur"]
 
-[ext_resource type="Script" uid="uid://cx7qlf0isv7s0" path="res://scripts/tabuleiroQuantidade.gd" id="1_3i7pe"]
+[ext_resource type="Script" uid="uid://cx7qlf0isv7s0" path="res://scripts/Fase1Nivel3/tabuleiroQuantidade.gd" id="1_3i7pe"]
 [ext_resource type="Texture2D" uid="uid://d174tuq6mkx68" path="res://Assets/cartas fase 3/tabuleiro_vazio.png" id="1_5hcc4"]
 
 [node name="tabuleiroQuantidade" type="Node2D" unique_id=1306765489]

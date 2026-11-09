@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://clvjscry2leiy"]
+
+[ext_resource type="Script" uid="uid://wwx1wodji11t" path="res://scripts/Navegacao.gd" id="1_icnr6"]
+[ext_resource type="Texture2D" uid="uid://c67ugeljdks1m" path="res://Assets/ui/Botões/botao - voltar.png" id="2_n2p5l"]
+[ext_resource type="Texture2D" uid="uid://g753jhjrax45" path="res://Assets/ui/Botões/botao - voltar - pressionado.png" id="3_s8vmx"]
+[ext_resource type="Script" uid="uid://1spwpe1rqi88" path="res://scripts/botao_voltar.gd" id="4_r30fv"]
+
+[node name="Navegacao" type="Node2D" unique_id=170738471]
+script = ExtResource("4_r30fv")
+
+[node name="BotaoVoltar" type="TextureButton" parent="." unique_id=695259021]
+offset_left = 41.0
+offset_top = 33.0
+offset_right = 122.0
+offset_bottom = 101.0
+texture_normal = ExtResource("2_n2p5l")
+texture_hover = ExtResource("3_s8vmx")
+script = ExtResource("1_icnr6")

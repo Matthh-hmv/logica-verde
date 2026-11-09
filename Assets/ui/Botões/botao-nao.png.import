@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://g753jhjrax45"
-path="res://.godot/imported/botao_voltar_pressionado.png-ea1923e87c9a1f8a68f62b1121a220a6.ctex"
+uid="uid://mq2574aj8xio"
+path="res://.godot/imported/botao-nao.png-fc920460535e50b578429baa423b9131.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ui/botao_voltar_pressionado.png"
-dest_files=["res://.godot/imported/botao_voltar_pressionado.png-ea1923e87c9a1f8a68f62b1121a220a6.ctex"]
+source_file="res://Assets/ui/Botões/botao-nao.png"
+dest_files=["res://.godot/imported/botao-nao.png-fc920460535e50b578429baa423b9131.ctex"]
 
 [params]
 

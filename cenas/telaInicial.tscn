@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://bnwml7p0avvra"]
+
+[ext_resource type="Script" uid="uid://dia7k0vnka0p0" path="res://scripts/tela_inicial.gd" id="1_fkht7"]
+[ext_resource type="Texture2D" uid="uid://y5grg5nvm4pr" path="res://Assets/Fundos e telas/Tela de início.png" id="2_7xrsl"]
+[ext_resource type="Texture2D" uid="uid://dqumsbdpeoh0u" path="res://Assets/ui/Botões/botao-Começar.png" id="3_xctda"]
+[ext_resource type="Texture2D" uid="uid://bbu8qt8fwypdg" path="res://Assets/ui/Botões/botao-Começar-pressionado.png" id="4_8l0gg"]
+[ext_resource type="Texture2D" uid="uid://cqs7te55m87ub" path="res://Assets/ui/Botões/botao-Relatório.png" id="5_nweew"]
+[ext_resource type="Texture2D" uid="uid://clcbuvxjw3goj" path="res://Assets/ui/Botões/botao-Relatório-pressionado.png" id="6_smfe6"]
+[ext_resource type="Texture2D" uid="uid://svx01xebbi8o" path="res://Assets/ui/Botões/botao-Sobre o Jogo.png" id="7_qlptd"]
+[ext_resource type="Texture2D" uid="uid://c1q7xhhnc1lhw" path="res://Assets/ui/Botões/botao-Sobre_o_Jogo-pressionado.png" id="8_pojna"]
+[ext_resource type="Texture2D" uid="uid://dlnpw2vuvlbc7" path="res://Assets/ui/Botões/botao-Sair.png" id="9_15u4s"]
+[ext_resource type="Texture2D" uid="uid://xktps44lixvo" path="res://Assets/ui/Botões/botao-Sair-pressionado.png" id="10_tjq1e"]
+
+[node name="TelaInicial" type="Node2D" unique_id=721937092]
+script = ExtResource("1_fkht7")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1225012724]
+layer = -1
+
+[node name="Fundo" type="TextureRect" parent="CanvasLayer" unique_id=811037165]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_7xrsl")
+
+[node name="BotaoComecar" type="TextureButton" parent="." unique_id=1283360347]
+offset_left = 559.0
+offset_top = 520.0
+offset_right = 1279.0
+offset_bottom = 614.0
+texture_normal = ExtResource("3_xctda")
+texture_hover = ExtResource("4_8l0gg")
+
+[node name="BotaoRelatorio" type="TextureButton" parent="." unique_id=572679906]
+offset_left = 559.0
+offset_top = 627.0
+offset_right = 1279.0
+offset_bottom = 721.0
+texture_normal = ExtResource("5_nweew")
+texture_hover = ExtResource("6_smfe6")
+
+[node name="BotaoSobre" type="TextureButton" parent="." unique_id=1491835011]
+offset_left = 559.0
+offset_top = 732.0
+offset_right = 1279.0
+offset_bottom = 826.0
+texture_normal = ExtResource("7_qlptd")
+texture_hover = ExtResource("8_pojna")
+
+[node name="BotaoSair" type="TextureButton" parent="." unique_id=251308118]
+offset_left = 559.0
+offset_top = 839.0
+offset_right = 1279.0
+offset_bottom = 933.0
+texture_normal = ExtResource("9_15u4s")
+texture_hover = ExtResource("10_tjq1e")

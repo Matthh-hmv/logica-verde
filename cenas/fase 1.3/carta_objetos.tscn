@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dfcnhxpllaiqx"]
 
-[ext_resource type="Script" uid="uid://drxmuexyruhsy" path="res://scripts/cartaObjetos.gd" id="1_jix08"]
+[ext_resource type="Script" uid="uid://drxmuexyruhsy" path="res://scripts/Fase1Nivel3/cartaObjetos.gd" id="1_jix08"]
 [ext_resource type="Texture2D" uid="uid://cgfynb5p4r3xb" path="res://Assets/cartas fase 3/carta_ecobag_1.png" id="2_1i85t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e2ube"]

@@ -11,8 +11,14 @@ config_version=5
 [application]
 
 config/name="Lógica Verde"
+run/main_scene="uid://bnwml7p0avvra"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Navegacao="*uid://wwx1wodji11t"
+Aluno="*uid://bw62qtq267p5a"
 
 [display]
 

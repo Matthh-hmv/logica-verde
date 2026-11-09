@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://svx01xebbi8o"
-path="res://.godot/imported/botao-Sobre o Jogo.png-d30fc8e43fc63ddd9b674da890c723a9.ctex"
+uid="uid://b1ulfkmddh8p6"
+path="res://.godot/imported/botao_comecar_verde_normal.png-54f2a9c3b98c43758829909b618f3138.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ui/botao-Sobre o Jogo.png"
-dest_files=["res://.godot/imported/botao-Sobre o Jogo.png-d30fc8e43fc63ddd9b674da890c723a9.ctex"]
+source_file="res://Assets/ui/Botões/botao_comecar_verde_normal.png"
+dest_files=["res://.godot/imported/botao_comecar_verde_normal.png-54f2a9c3b98c43758829909b618f3138.ctex"]
 
 [params]
 

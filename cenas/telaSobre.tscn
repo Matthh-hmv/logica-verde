@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://b8allsvuun3u"]
+
+[ext_resource type="Texture2D" uid="uid://br2u60gyxcods" path="res://Assets/Fundos e telas/Tela Sobre.png" id="1_i52ly"]
+[ext_resource type="PackedScene" uid="uid://clvjscry2leiy" path="res://cenas/botaoVoltar.tscn" id="2_mvb2s"]
+
+[node name="TelaSobre" type="Node2D" unique_id=714016631]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=936270375]
+layer = -1
+
+[node name="FundoTela" type="TextureRect" parent="CanvasLayer" unique_id=271070672]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_i52ly")
+
+[node name="Navegacao" parent="." unique_id=170738471 instance=ExtResource("2_mvb2s")]

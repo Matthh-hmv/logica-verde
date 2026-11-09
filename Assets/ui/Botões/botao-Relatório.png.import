@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dlnpw2vuvlbc7"
-path="res://.godot/imported/botao-Sair.png-0ddb1f6fb70cf150b3884f421c5377a8.ctex"
+uid="uid://cqs7te55m87ub"
+path="res://.godot/imported/botao-Relatório.png-24223a2f00e9024e80accab283d10639.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/ui/botao-Sair.png"
-dest_files=["res://.godot/imported/botao-Sair.png-0ddb1f6fb70cf150b3884f421c5377a8.ctex"]
+source_file="res://Assets/ui/Botões/botao-Relatório.png"
+dest_files=["res://.godot/imported/botao-Relatório.png-24223a2f00e9024e80accab283d10639.ctex"]
 
 [params]
 

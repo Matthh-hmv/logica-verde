@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://dhawpu670lsl5"]
+
+[ext_resource type="Script" uid="uid://c0iqawqov0fnh" path="res://scripts/telaNome.gd" id="1_v5c1j"]
+[ext_resource type="Texture2D" uid="uid://b476lnyuudetj" path="res://Assets/Fundos e telas/Iniciar o jogo.png" id="2_w6184"]
+[ext_resource type="FontFile" uid="uid://yl60uq2i64fx" path="res://Assets/Fontes/Minecraft.ttf" id="3_qq00o"]
+[ext_resource type="Texture2D" uid="uid://b1ulfkmddh8p6" path="res://Assets/ui/Botões/botao_comecar_verde_normal.png" id="4_qq00o"]
+[ext_resource type="Texture2D" uid="uid://b452rxpr7y6mr" path="res://Assets/ui/Botões/botao_comecar_verde_pressionado.png" id="5_nqwux"]
+[ext_resource type="PackedScene" uid="uid://clvjscry2leiy" path="res://cenas/botaoVoltar.tscn" id="6_nqwux"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e2ube"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="TelaNome" type="Node2D" unique_id=1677593847]
+script = ExtResource("1_v5c1j")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=524983895]
+layer = -1
+
+[node name="Fundo" type="TextureRect" parent="CanvasLayer" unique_id=232334916]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_w6184")
+
+[node name="CampoNome" type="LineEdit" parent="." unique_id=1799248324]
+unique_name_in_owner = true
+offset_left = 717.0
+offset_top = 497.0
+offset_right = 1205.0
+offset_bottom = 552.0
+theme_override_fonts/font = ExtResource("3_qq00o")
+theme_override_font_sizes/font_size = 39
+theme_override_styles/normal = SubResource("StyleBoxFlat_e2ube")
+placeholder_text = "Digite seu nome"
+alignment = 1
+max_length = 30
+context_menu_enabled = false
+
+[node name="BotaoComecar" type="TextureButton" parent="." unique_id=1312380857]
+offset_left = 657.0
+offset_top = 668.0
+offset_right = 1257.0
+offset_bottom = 804.0
+texture_normal = ExtResource("4_qq00o")
+texture_hover = ExtResource("5_nqwux")
+
+[node name="Navegacao" parent="." unique_id=170738471 instance=ExtResource("6_nqwux")]

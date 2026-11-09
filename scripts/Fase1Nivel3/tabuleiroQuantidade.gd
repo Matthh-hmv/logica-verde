@@ -4,8 +4,8 @@ class_name TabuleiroQuantidade
 @export_range(0, 2) var variante: int = 0   
 @export var linhas: int = 3
 
-const CARTA_OBJETO := preload("res://cenas/carta_objetos.tscn")
-const CARTA_NUMERO := preload("res://cenas/carta_numeros.tscn")
+const CARTA_OBJETO := preload("res://cenas/fase 1.3/carta_objetos.tscn")
+const CARTA_NUMERO := preload("res://cenas/fase 1.3/carta_numeros.tscn")
 
 # Centro de cada carta, em pixels da imagem original do tabuleiro (1384x1000)
 const X_OBJETO := 480.0
