@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://crsrxmbr1f46h"
-path="res://.godot/imported/direcoes.png-a0dd2c4d669ef0b4546f30b649b3ec05.ctex"
+uid="uid://btk1torw1khxf"
+path="res://.godot/imported/estrela amarela.png-107e095e97db801a82e7ce80eab3b5a6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Fundos e telas/Fase 2/direcoes.png"
-dest_files=["res://.godot/imported/direcoes.png-a0dd2c4d669ef0b4546f30b649b3ec05.ctex"]
+source_file="res://Assets/Objetos/estrela amarela.png"
+dest_files=["res://.godot/imported/estrela amarela.png-107e095e97db801a82e7ce80eab3b5a6.ctex"]
 
 [params]
 

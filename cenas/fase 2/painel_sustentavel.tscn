@@ -1,40 +1,40 @@
 [gd_scene format=3 uid="uid://duoewodlv202d"]
 
 [ext_resource type="Script" uid="uid://cydtmwqvpopep" path="res://scripts/Fase2/painel_sustentavel.gd" id="1_jby47"]
-[ext_resource type="Texture2D" uid="uid://btij4s0wao6uk" path="res://Assets/Fundos e telas/Fase 2/board objetos.png" id="3_pfl6b"]
 
 [node name="PainelSustentavel" type="Control" unique_id=1778547074]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 1289.0
+offset_top = 115.0
+offset_right = 1897.0
+offset_bottom = 947.0
 script = ExtResource("1_jby47")
 
 [node name="Imagem" type="TextureRect" parent="." unique_id=371241115]
 texture_filter = 1
 layout_mode = 0
-offset_left = 1296.0
-offset_top = 120.0
-offset_right = 1888.0
-offset_bottom = 944.0
-texture = ExtResource("3_pfl6b")
+offset_left = 10.0
+offset_top = 8.0
+offset_right = 591.0
+offset_bottom = 832.0
 expand_mode = 1
 stretch_mode = 5
 
 [node name="Resposta" type="Button" parent="." unique_id=2068514741]
 layout_mode = 0
-offset_left = 1368.0
-offset_top = 496.0
-offset_right = 1824.0
-offset_bottom = 784.0
+offset_left = 72.0
+offset_top = 376.0
+offset_right = 528.0
+offset_bottom = 664.0
 flat = true
 
 [node name="Opcoes" type="HBoxContainer" parent="." unique_id=1670282542]
 layout_mode = 0
-offset_left = 1364.0
-offset_top = 496.0
-offset_right = 1830.0
-offset_bottom = 784.0
+offset_left = 74.0
+offset_top = 376.0
+offset_right = 540.0
+offset_bottom = 664.0
 
 [node name="Opcao0" type="Button" parent="Opcoes" unique_id=1036857926]
 layout_mode = 2

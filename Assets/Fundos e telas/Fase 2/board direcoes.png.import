@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbvfig4duq2g4"
-path="res://.godot/imported/seta-andar.png-a69c6d251ec943a770625d694c90e7d7.ctex"
+uid="uid://crsrxmbr1f46h"
+path="res://.godot/imported/board direcoes.png-d0abcdc6b998bc4e6db1d25f25b89454.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Fundos e telas/Fase 2/seta-andar.png"
-dest_files=["res://.godot/imported/seta-andar.png-a69c6d251ec943a770625d694c90e7d7.ctex"]
+source_file="res://Assets/Fundos e telas/Fase 2/board direcoes.png"
+dest_files=["res://.godot/imported/board direcoes.png-d0abcdc6b998bc4e6db1d25f25b89454.ctex"]
 
 [params]
 

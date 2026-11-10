@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dneuhjkxdw4to"
-path="res://.godot/imported/Fase 2.1 - direções.png-30f7409c34ea7ed1a14f4b07d28dd46b.ctex"
+uid="uid://ce5ibbxysy2r"
+path="res://.godot/imported/Tela tabuleiro.png-f2ac37afdd05f7fc383ab38c555d933f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Fundos e telas/Fase 2/Fase 2.1 - direções.png"
-dest_files=["res://.godot/imported/Fase 2.1 - direções.png-30f7409c34ea7ed1a14f4b07d28dd46b.ctex"]
+source_file="res://Assets/Fundos e telas/Fase 2/Tela tabuleiro.png"
+dest_files=["res://.godot/imported/Tela tabuleiro.png-f2ac37afdd05f7fc383ab38c555d933f.ctex"]
 
 [params]
 

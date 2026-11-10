@@ -2,21 +2,20 @@ class_name PainelLateral
 extends Control
 
 func _ready() -> void:
-	mostrar("Direcoes")
+	mostrar_direcoes()
 
-func mostrar(nome: String) -> void:
-	for tela in get_children():
-		tela.visible = (tela.name == nome)
-
-func mostrar_direcoes(texto := "") -> void:
-	if texto != "":
-		$Direcoes/Texto.text = texto
-	mostrar("Direcoes")
+func mostrar_direcoes(_texto := "") -> void:
+	$PainelConta.hide()
+	$PainelSustentavel.hide()
 
 func executar_conta(d: Dictionary, chances: int) -> bool:
-	mostrar("PainelConta")
-	return await $PainelConta.executar(d, chances)
+	$PainelConta.show()
+	var acertou: bool = await $PainelConta.executar(d, chances)
+	$PainelConta.hide()
+	return acertou
 
 func executar_sustentavel(d: Dictionary, chances: int) -> bool:
-	mostrar("PainelSustentavel")
-	return await $PainelSustentavel.executar(d, chances)
+	$PainelSustentavel.show()
+	var acertou: bool = await $PainelSustentavel.executar(d, chances)
+	$PainelSustentavel.hide()
+	return acertou

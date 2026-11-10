@@ -1,25 +1,25 @@
 [gd_scene format=3 uid="uid://c4t1k47335bv3"]
 
-[ext_resource type="Texture2D" uid="uid://dneuhjkxdw4to" path="res://Assets/Fundos e telas/Fase 2/Fase 2.1 - direções.png" id="1_4tj1f"]
 [ext_resource type="Script" uid="uid://bfufwxnd7skaf" path="res://scripts/Fase2/painel.gd" id="1_d1gfb"]
+[ext_resource type="Script" uid="uid://4q58aswpcc54" path="res://scripts/Fase2/tabuleiro.gd" id="1_fu7a6"]
 [ext_resource type="Texture2D" uid="uid://blif2dpwmvoe8" path="res://Assets/Objetos/onibus.png" id="2_crmtw"]
+[ext_resource type="Texture2D" uid="uid://ce5ibbxysy2r" path="res://Assets/Fundos e telas/Fase 2/Tela tabuleiro.png" id="2_fu7a6"]
 [ext_resource type="Script" uid="uid://bajuky2baeh8b" path="res://scripts/Fase2/casa.gd" id="3_ji4pw"]
+[ext_resource type="Texture2D" uid="uid://btk1torw1khxf" path="res://Assets/Objetos/estrela amarela.png" id="5_ax84u"]
 [ext_resource type="PackedScene" uid="uid://duoewodlv202d" path="res://cenas/fase 2/painel_sustentavel.tscn" id="5_fu7a6"]
 [ext_resource type="PackedScene" uid="uid://cdsp2w5i3gptn" path="res://cenas/fase 2/painel_conta.tscn" id="6_ax84u"]
 
-[node name="Painel" type="Control" unique_id=1217837217]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("1_d1gfb")
+[node name="Tabuleiro" type="Node2D" unique_id=1786066768 node_paths=PackedStringArray("casa_inicial")]
+script = ExtResource("1_fu7a6")
+casa_inicial = NodePath("posicao0")
 
-[node name="Fase2_1Direções" type="Sprite2D" parent="." unique_id=1196239267]
-position = Vector2(960, 544)
-texture = ExtResource("1_4tj1f")
+[node name="TelaTabuleiro" type="Sprite2D" parent="." unique_id=463020170]
+position = Vector2(960, 540)
+texture = ExtResource("2_fu7a6")
 
 [node name="Onibus" type="Sprite2D" parent="." unique_id=1225309113]
-position = Vector2(343, 864.00006)
+z_index = 1
+position = Vector2(336.00003, 856.00006)
 scale = Vector2(0.32421875, 0.32421875)
 texture = ExtResource("2_crmtw")
 
@@ -27,98 +27,186 @@ texture = ExtResource("2_crmtw")
 position = Vector2(339, 846)
 gizmo_extents = 49.0
 script = ExtResource("3_ji4pw")
+direita = NodePath("../posicao1")
 
 [node name="posicao1" type="Marker2D" parent="." unique_id=199153869]
-position = Vector2(469, 846)
+position = Vector2(468, 847)
 gizmo_extents = 49.0
 script = ExtResource("3_ji4pw")
+direita = NodePath("../posicaoA1")
 
 [node name="posicaoA1" type="Marker2D" parent="." unique_id=1444786276]
-position = Vector2(599, 846)
+position = Vector2(597, 847)
 gizmo_extents = 49.0
 script = ExtResource("3_ji4pw")
 tipo = 1
+cima = NodePath("../posicaoV1")
+direita = NodePath("../posicao10")
+
+[node name="estrela" type="Sprite2D" parent="posicaoA1" unique_id=1590633046]
+visible = false
+texture_filter = 1
+texture = ExtResource("5_ax84u")
 
 [node name="posicao10" type="Marker2D" parent="." unique_id=2034845414]
-position = Vector2(720, 840)
+position = Vector2(727, 847)
 gizmo_extents = 49.0
 script = ExtResource("3_ji4pw")
+direita = NodePath("../posicao11")
 
 [node name="posicao11" type="Marker2D" parent="." unique_id=910164122]
-position = Vector2(856, 840)
+position = Vector2(857, 848)
 gizmo_extents = 49.0
 script = ExtResource("3_ji4pw")
 
 [node name="posicaoV1" type="Marker2D" parent="." unique_id=671059007]
-position = Vector2(600, 712)
+position = Vector2(595, 714)
 gizmo_extents = 49.0
 script = ExtResource("3_ji4pw")
 tipo = 2
+cima = NodePath("../posicao4")
+
+[node name="estrela" type="Sprite2D" parent="posicaoV1" unique_id=580170033]
+visible = false
+texture_filter = 1
+texture = ExtResource("5_ax84u")
 
 [node name="posicao4" type="Marker2D" parent="." unique_id=1370098870]
-position = Vector2(599, 585)
+position = Vector2(596, 587)
 gizmo_extents = 49.0
 script = ExtResource("3_ji4pw")
+cima = NodePath("../posicaoA2")
 
 [node name="posicaoA2" type="Marker2D" parent="." unique_id=1537426391]
-position = Vector2(600, 456)
+position = Vector2(595, 458)
 gizmo_extents = 49.0
 script = ExtResource("3_ji4pw")
 tipo = 1
+esquerda = NodePath("../posicao12")
+direita = NodePath("../posicaoV2")
+
+[node name="estrela" type="Sprite2D" parent="posicaoA2" unique_id=1748168296]
+visible = false
+texture_filter = 1
+texture = ExtResource("5_ax84u")
 
 [node name="posicao12" type="Marker2D" parent="." unique_id=367237969]
-position = Vector2(464, 456)
+position = Vector2(466, 458)
 gizmo_extents = 49.0
 script = ExtResource("3_ji4pw")
+esquerda = NodePath("../posicao13")
 
 [node name="posicao13" type="Marker2D" parent="." unique_id=1616118621]
-position = Vector2(336, 448)
+position = Vector2(337, 458)
 gizmo_extents = 49.0
 script = ExtResource("3_ji4pw")
+baixo = NodePath("../posicao14")
 
 [node name="posicao14" type="Marker2D" parent="." unique_id=55708724]
-position = Vector2(336, 584)
+position = Vector2(337, 587)
 gizmo_extents = 49.0
 script = ExtResource("3_ji4pw")
+esquerda = NodePath("../posicao15")
 
 [node name="posicao15" type="Marker2D" parent="." unique_id=1145194002]
-position = Vector2(208, 592)
+position = Vector2(207, 587)
 gizmo_extents = 49.0
 script = ExtResource("3_ji4pw")
 
 [node name="posicaoV2" type="Marker2D" parent="." unique_id=1049962848]
-position = Vector2(728, 456)
+position = Vector2(725, 457)
 gizmo_extents = 49.0
 script = ExtResource("3_ji4pw")
 tipo = 2
+cima = NodePath("../posicao7")
+
+[node name="estrela" type="Sprite2D" parent="posicaoV2" unique_id=988816949]
+visible = false
+texture_filter = 1
+texture = ExtResource("5_ax84u")
 
 [node name="posicao7" type="Marker2D" parent="." unique_id=1159692276]
-position = Vector2(728, 327)
+position = Vector2(726, 327)
 gizmo_extents = 49.0
 script = ExtResource("3_ji4pw")
+cima = NodePath("../posicaoA3")
 
 [node name="posicaoA3" type="Marker2D" parent="." unique_id=280955205]
-position = Vector2(727, 198)
+position = Vector2(727, 202)
 gizmo_extents = 49.0
 script = ExtResource("3_ji4pw")
 tipo = 1
+eh_escola = true
+direita = NodePath("../posicao9")
+
+[node name="estrela" type="Sprite2D" parent="posicaoA3" unique_id=1912973890]
+visible = false
+texture_filter = 1
+position = Vector2(1, -2)
+texture = ExtResource("5_ax84u")
 
 [node name="posicao9" type="Marker2D" parent="." unique_id=1245452159]
-position = Vector2(857, 195)
+position = Vector2(856, 197)
 gizmo_extents = 49.0
 script = ExtResource("3_ji4pw")
 eh_escola = true
 
-[node name="PainelConta" parent="." unique_id=575845702 instance=ExtResource("6_ax84u")]
-layout_mode = 0
-offset_left = -600.0
-offset_top = -1200.0
-offset_right = 464.0
-offset_bottom = -152.0
+[node name="Botao Direita" type="Button" parent="." unique_id=1973540429]
+offset_left = 1632.0
+offset_top = 685.0
+offset_right = 1728.0
+offset_bottom = 749.0
+flat = true
 
-[node name="PainelSustentavel" parent="." unique_id=1778547074 instance=ExtResource("5_fu7a6")]
+[node name="Botao Esquerda" type="Button" parent="." unique_id=883613007]
+offset_left = 1456.0
+offset_top = 685.0
+offset_right = 1552.0
+offset_bottom = 749.0
+flat = true
+
+[node name="Botao Cima" type="Button" parent="." unique_id=741354314]
+offset_left = 1560.0
+offset_top = 598.0
+offset_right = 1624.0
+offset_bottom = 694.0
+flat = true
+
+[node name="Botao Baixo" type="Button" parent="." unique_id=855973206]
+offset_left = 1560.0
+offset_top = 742.0
+offset_right = 1624.0
+offset_bottom = 838.0
+flat = true
+
+[node name="Painel" type="Control" parent="." unique_id=375964944]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1296.0
+offset_top = 120.0
+offset_right = 1888.0
+offset_bottom = 944.0
+mouse_filter = 2
+script = ExtResource("1_d1gfb")
+
+[node name="PainelConta" parent="Painel" unique_id=575845702 instance=ExtResource("6_ax84u")]
 layout_mode = 0
-offset_left = 472.0
-offset_top = -1232.0
-offset_right = 1056.0
-offset_bottom = -408.0
+offset_left = 0.0
+offset_top = 2.0
+offset_right = 592.0
+offset_bottom = 824.0
+mouse_filter = 2
+
+[node name="PainelSustentavel" parent="Painel" unique_id=1778547074 instance=ExtResource("5_fu7a6")]
+layout_mode = 0
+offset_left = 0.0
+offset_top = 2.0
+offset_right = 592.0
+offset_bottom = 822.0
+mouse_filter = 2
+
+[connection signal="pressed" from="Botao Direita" to="." method="_on_botao_direita_pressed"]
+[connection signal="pressed" from="Botao Esquerda" to="." method="_on_botao_esquerda_pressed"]
+[connection signal="pressed" from="Botao Cima" to="." method="_on_cima_pressed"]
+[connection signal="pressed" from="Botao Cima" to="." method="_on_botao_cima_pressed"]
+[connection signal="pressed" from="Botao Baixo" to="." method="_on_botao_baixo_pressed"]

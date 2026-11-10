@@ -81,6 +81,7 @@ func _chegou(casa: Casa) -> void:
 	else:
 		painel.mostrar_direcoes()
 
+
 func _on_botao_cima_pressed() -> void:
 	_mover("cima")
 

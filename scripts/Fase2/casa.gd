@@ -27,6 +27,6 @@ func _ready() -> void:
 			vizinhas[dir] = outra
 			outra.vizinhas[OPOSTAS[dir]] = self
 
-func completar(textura_estrela: Texture2D) -> void:
+func completar(_textura = null) -> void:
 	completada = true
-	$Estrela.texture = textura_estrela
+	$Estrela.show()
