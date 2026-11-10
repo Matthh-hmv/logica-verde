@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqkpi1opjjs48"
-path="res://.godot/imported/Fase 2.1 - contexto.png-e4213a852731cd77655f102001608144.ctex"
+uid="uid://bbvfig4duq2g4"
+path="res://.godot/imported/seta-andar.png-a69c6d251ec943a770625d694c90e7d7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Fundos e telas/Fase 2/Fase 2.1 - contexto.png"
-dest_files=["res://.godot/imported/Fase 2.1 - contexto.png-e4213a852731cd77655f102001608144.ctex"]
+source_file="res://Assets/Fundos e telas/Fase 2/seta-andar.png"
+dest_files=["res://.godot/imported/seta-andar.png-a69c6d251ec943a770625d694c90e7d7.ctex"]
 
 [params]
 

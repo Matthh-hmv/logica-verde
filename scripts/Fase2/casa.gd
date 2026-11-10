@@ -1,23 +1,32 @@
 class_name Casa
 extends Marker2D
 
-@export var cima: Casa
-@export var baixo: Casa
-@export var esquerda: Casa
-@export var direita: Casa
+enum Tipo { NORMAL, AZUL, VERMELHA }
+
+@export var tipo: Tipo = Tipo.NORMAL
 @export var eh_escola := false
+@export_multiline var instrucao_seguinte := ""   # texto do painel ao completar esta casa
+
+@export_group("Vizinhas")
+@export var cima: NodePath
+@export var baixo: NodePath
+@export var esquerda: NodePath
+@export var direita: NodePath
+
+const OPOSTAS := {"cima": "baixo", "baixo": "cima", "esquerda": "direita", "direita": "esquerda"}
+var vizinhas := {}
+var completada := false
+var desafio: Dictionary = {}   # preenchido no sorteio pelo tabuleiro
 
 func _ready() -> void:
-	# Basta ligar numa direção no Inspector; a volta é automática
-	if cima: cima.baixo = self
-	if baixo: baixo.cima = self
-	if esquerda: esquerda.direita = self
-	if direita: direita.esquerda = self
+	add_to_group("casas")
+	for dir in OPOSTAS:
+		var caminho: NodePath = get(dir)
+		if not caminho.is_empty():
+			var outra := get_node(caminho) as Casa
+			vizinhas[dir] = outra
+			outra.vizinhas[OPOSTAS[dir]] = self
 
-enum Tipo { NORMAL, AZUL, VERMELHA }
-@export var tipo: Tipo = Tipo.NORMAL
-var completada := false
-
-func completar() -> void:
+func completar(textura_estrela: Texture2D) -> void:
 	completada = true
-	$Estrela.modulate = Color.WHITE   # estrela fica colorida
+	$Estrela.texture = textura_estrela

@@ -1,0 +1,124 @@
+[gd_scene format=3 uid="uid://c4t1k47335bv3"]
+
+[ext_resource type="Texture2D" uid="uid://dneuhjkxdw4to" path="res://Assets/Fundos e telas/Fase 2/Fase 2.1 - direções.png" id="1_4tj1f"]
+[ext_resource type="Script" uid="uid://bfufwxnd7skaf" path="res://scripts/Fase2/painel.gd" id="1_d1gfb"]
+[ext_resource type="Texture2D" uid="uid://blif2dpwmvoe8" path="res://Assets/Objetos/onibus.png" id="2_crmtw"]
+[ext_resource type="Script" uid="uid://bajuky2baeh8b" path="res://scripts/Fase2/casa.gd" id="3_ji4pw"]
+[ext_resource type="PackedScene" uid="uid://duoewodlv202d" path="res://cenas/fase 2/painel_sustentavel.tscn" id="5_fu7a6"]
+[ext_resource type="PackedScene" uid="uid://cdsp2w5i3gptn" path="res://cenas/fase 2/painel_conta.tscn" id="6_ax84u"]
+
+[node name="Painel" type="Control" unique_id=1217837217]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_d1gfb")
+
+[node name="Fase2_1Direções" type="Sprite2D" parent="." unique_id=1196239267]
+position = Vector2(960, 544)
+texture = ExtResource("1_4tj1f")
+
+[node name="Onibus" type="Sprite2D" parent="." unique_id=1225309113]
+position = Vector2(343, 864.00006)
+scale = Vector2(0.32421875, 0.32421875)
+texture = ExtResource("2_crmtw")
+
+[node name="posicao0" type="Marker2D" parent="." unique_id=1387172763]
+position = Vector2(339, 846)
+gizmo_extents = 49.0
+script = ExtResource("3_ji4pw")
+
+[node name="posicao1" type="Marker2D" parent="." unique_id=199153869]
+position = Vector2(469, 846)
+gizmo_extents = 49.0
+script = ExtResource("3_ji4pw")
+
+[node name="posicaoA1" type="Marker2D" parent="." unique_id=1444786276]
+position = Vector2(599, 846)
+gizmo_extents = 49.0
+script = ExtResource("3_ji4pw")
+tipo = 1
+
+[node name="posicao10" type="Marker2D" parent="." unique_id=2034845414]
+position = Vector2(720, 840)
+gizmo_extents = 49.0
+script = ExtResource("3_ji4pw")
+
+[node name="posicao11" type="Marker2D" parent="." unique_id=910164122]
+position = Vector2(856, 840)
+gizmo_extents = 49.0
+script = ExtResource("3_ji4pw")
+
+[node name="posicaoV1" type="Marker2D" parent="." unique_id=671059007]
+position = Vector2(600, 712)
+gizmo_extents = 49.0
+script = ExtResource("3_ji4pw")
+tipo = 2
+
+[node name="posicao4" type="Marker2D" parent="." unique_id=1370098870]
+position = Vector2(599, 585)
+gizmo_extents = 49.0
+script = ExtResource("3_ji4pw")
+
+[node name="posicaoA2" type="Marker2D" parent="." unique_id=1537426391]
+position = Vector2(600, 456)
+gizmo_extents = 49.0
+script = ExtResource("3_ji4pw")
+tipo = 1
+
+[node name="posicao12" type="Marker2D" parent="." unique_id=367237969]
+position = Vector2(464, 456)
+gizmo_extents = 49.0
+script = ExtResource("3_ji4pw")
+
+[node name="posicao13" type="Marker2D" parent="." unique_id=1616118621]
+position = Vector2(336, 448)
+gizmo_extents = 49.0
+script = ExtResource("3_ji4pw")
+
+[node name="posicao14" type="Marker2D" parent="." unique_id=55708724]
+position = Vector2(336, 584)
+gizmo_extents = 49.0
+script = ExtResource("3_ji4pw")
+
+[node name="posicao15" type="Marker2D" parent="." unique_id=1145194002]
+position = Vector2(208, 592)
+gizmo_extents = 49.0
+script = ExtResource("3_ji4pw")
+
+[node name="posicaoV2" type="Marker2D" parent="." unique_id=1049962848]
+position = Vector2(728, 456)
+gizmo_extents = 49.0
+script = ExtResource("3_ji4pw")
+tipo = 2
+
+[node name="posicao7" type="Marker2D" parent="." unique_id=1159692276]
+position = Vector2(728, 327)
+gizmo_extents = 49.0
+script = ExtResource("3_ji4pw")
+
+[node name="posicaoA3" type="Marker2D" parent="." unique_id=280955205]
+position = Vector2(727, 198)
+gizmo_extents = 49.0
+script = ExtResource("3_ji4pw")
+tipo = 1
+
+[node name="posicao9" type="Marker2D" parent="." unique_id=1245452159]
+position = Vector2(857, 195)
+gizmo_extents = 49.0
+script = ExtResource("3_ji4pw")
+eh_escola = true
+
+[node name="PainelConta" parent="." unique_id=575845702 instance=ExtResource("6_ax84u")]
+layout_mode = 0
+offset_left = -600.0
+offset_top = -1200.0
+offset_right = 464.0
+offset_bottom = -152.0
+
+[node name="PainelSustentavel" parent="." unique_id=1778547074 instance=ExtResource("5_fu7a6")]
+layout_mode = 0
+offset_left = 472.0
+offset_top = -1232.0
+offset_right = 1056.0
+offset_bottom = -408.0

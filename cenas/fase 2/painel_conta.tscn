@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://cdsp2w5i3gptn"]
+
+[ext_resource type="Script" uid="uid://dgo1bbl8eknjt" path="res://scripts/Fase2/painel_conta.gd" id="1_ccc3w"]
+[ext_resource type="Texture2D" uid="uid://dwm7dmg0b1m38" path="res://Assets/Fundos e telas/Fase 2/board contexto.png" id="3_vrt06"]
+[ext_resource type="Texture2D" uid="uid://1g0iv1xwc507" path="res://Assets/Fundos e telas/Fase 2/board contas.png" id="4_ayppq"]
+
+[node name="PainelConta" type="Control" unique_id=575845702]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_ccc3w")
+
+[node name="Contexto" type="Control" parent="." unique_id=1298723394]
+anchors_preset = 0
+offset_left = 1312.0
+offset_top = 128.0
+offset_right = 1888.0
+offset_bottom = 944.0
+
+[node name="Imagem" type="TextureRect" parent="Contexto" unique_id=687514950]
+texture_filter = 1
+layout_mode = 0
+offset_left = -16.0
+offset_top = -8.0
+offset_right = 576.0
+offset_bottom = 816.0
+texture = ExtResource("3_vrt06")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Continuar" type="Button" parent="Contexto" unique_id=162932442]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 648.0
+offset_right = 552.0
+offset_bottom = 800.0
+flat = true
+
+[node name="Conta" type="Control" parent="." unique_id=1310709016]
+anchors_preset = 0
+offset_left = 1293.0
+offset_top = 120.0
+offset_right = 1893.0
+offset_bottom = 960.0
+
+[node name="Imagem" type="TextureRect" parent="Conta" unique_id=1727766744]
+texture_filter = 1
+layout_mode = 0
+offset_left = 2.0
+offset_right = 594.0
+offset_bottom = 823.0
+texture = ExtResource("4_ayppq")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Resposta" type="Button" parent="Conta" unique_id=667507597]
+layout_mode = 0
+offset_left = 123.0
+offset_top = 432.0
+offset_right = 483.0
+offset_bottom = 588.0
+flat = true
+
+[node name="Opcoes" type="HBoxContainer" parent="Conta" unique_id=1234088942]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 648.0
+offset_right = 571.0
+offset_bottom = 800.0
+
+[node name="Opcao0" type="Button" parent="Conta/Opcoes" unique_id=2098060039]
+layout_mode = 2
+
+[node name="Opcao1" type="Button" parent="Conta/Opcoes" unique_id=320347776]
+layout_mode = 2
+
+[node name="Opcao2" type="Button" parent="Conta/Opcoes" unique_id=1227369210]
+layout_mode = 2
+
+[node name="Mensagem" type="Button" parent="Conta" unique_id=76997675]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 656.0
+offset_right = 571.0
+offset_bottom = 808.0
+flat = true

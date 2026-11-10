@@ -1,9 +1,13 @@
 extends Node2D
 
 @onready var onibus: Sprite2D = $Onibus
+@onready var painel: PainelLateral = $Painel
+
 @export var casa_inicial: Casa
-@export var tela_conta: PackedScene
-@export var tela_sustentavel: PackedScene
+@export var estrela_amarela: Texture2D
+@export var chances_conta := 3
+@export var chances_sustentavel := 2
+@export_multiline var instrucao_inicial := "Ande até a próxima casa azul"
 
 var atual: Casa
 var movendo := false
@@ -14,12 +18,32 @@ func _ready() -> void:
 		return
 	atual = casa_inicial
 	onibus.global_position = atual.global_position
+	_sortear_desafios()
+	painel.mostrar_direcoes(instrucao_inicial)
+
+func _sortear_desafios() -> void:
+	var azuis := []
+	var vermelhas := []
+	for c in get_tree().get_nodes_in_group("casas"):
+		if c.tipo == Casa.Tipo.AZUL:
+			azuis.append(c)
+		elif c.tipo == Casa.Tipo.VERMELHA:
+			vermelhas.append(c)
+
+	var contas := BancoDesafios.CONTAS.duplicate()
+	contas.shuffle()
+	for i in mini(azuis.size(), contas.size()):
+		azuis[i].desafio = contas[i]
+
+	var escolhas := BancoDesafios.SUSTENTAVEIS.duplicate()
+	escolhas.shuffle()
+	for i in mini(vermelhas.size(), escolhas.size()):
+		vermelhas[i].desafio = escolhas[i]
 
 func _mover(direcao: String) -> void:
-	print("direção: ", direcao, " | casa atual: ", atual.name, " | destino: ", atual.get(direcao))
 	if movendo:
 		return
-	var destino: Casa = atual.get(direcao)
+	var destino: Casa = atual.vizinhas.get(direcao)
 	if destino == null:
 		_bloqueado()
 		return
@@ -32,7 +56,6 @@ func _mover(direcao: String) -> void:
 	movendo = false
 
 func _bloqueado() -> void:
-	# pequeno "tremidinha" para indicar que não há caminho
 	var pos := onibus.position
 	var tween := create_tween()
 	tween.tween_property(onibus, "position:x", pos.x + 6, 0.05)
@@ -43,23 +66,20 @@ func _chegou(casa: Casa) -> void:
 	if casa.eh_escola:
 		print("Chegou na escola!")
 		return
-	if casa.completada:
+	if casa.completada or casa.desafio.is_empty():
 		return
-	match casa.tipo:
-		Casa.Tipo.AZUL:
-			await _abrir_desafio(tela_conta, 3, casa)
-		Casa.Tipo.VERMELHA:
-			await _abrir_desafio(tela_sustentavel, 2, casa)
 
-func _abrir_desafio(cena: PackedScene, chances: int, casa: Casa) -> void:
-	var tela = cena.instantiate()
-	tela.chances = chances
-	$Telas.add_child(tela)
-	var acertou: bool = await tela.terminou
-	tela.queue_free()
+	var acertou := false
+	if casa.tipo == Casa.Tipo.AZUL:
+		acertou = await painel.executar_conta(casa.desafio, chances_conta)
+	else:
+		acertou = await painel.executar_sustentavel(casa.desafio, chances_sustentavel)
+
 	if acertou:
-		casa.completar()
-
+		casa.completar(estrela_amarela)
+		painel.mostrar_direcoes(casa.instrucao_seguinte)
+	else:
+		painel.mostrar_direcoes()
 
 func _on_botao_cima_pressed() -> void:
 	_mover("cima")
@@ -69,6 +89,6 @@ func _on_botao_baixo_pressed() -> void:
 
 func _on_botao_direita_pressed() -> void:
 	_mover("direita")
-	
+
 func _on_botao_esquerda_pressed() -> void:
 	_mover("esquerda")
