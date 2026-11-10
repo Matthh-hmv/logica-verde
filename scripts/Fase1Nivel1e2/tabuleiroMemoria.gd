@@ -93,6 +93,10 @@ func comparaTimeout() -> void:
 	
 	var a:= cartaSelecionada[0]
 	var b:= cartaSelecionada[1]	
+
+	# espera terminar de narrar o nome da carta antes de seguir
+	await Narrador.esperarTerminar()
+
 	var popup: popUpBase = POPUP.instantiate()
 	add_child(popup)
 	if a.id == b.id:

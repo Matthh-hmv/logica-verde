@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ep8ppishyysu"
+path="res://.godot/imported/Ops, essas cartas não são pares!.wav-fbdb812e0c94b4a4b116a50fbaef3737.sample"
+
+[deps]
+
+source_file="res://Assets/Áudios/Fases/Fase 1.1 (Manuela)/Ops, essas cartas não são pares!.wav"
+dest_files=["res://.godot/imported/Ops, essas cartas não são pares!.wav-fbdb812e0c94b4a4b116a50fbaef3737.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

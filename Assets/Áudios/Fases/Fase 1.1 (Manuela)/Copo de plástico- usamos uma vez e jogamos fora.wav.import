@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c2jym385ffmo3"
+path="res://.godot/imported/Copo de plástico- usamos uma vez e jogamos fora.wav-0b5c774d9a4d521d8981f37d84dbb140.sample"
+
+[deps]
+
+source_file="res://Assets/Áudios/Fases/Fase 1.1 (Manuela)/Copo de plástico- usamos uma vez e jogamos fora.wav"
+dest_files=["res://.godot/imported/Copo de plástico- usamos uma vez e jogamos fora.wav-0b5c774d9a4d521d8981f37d84dbb140.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

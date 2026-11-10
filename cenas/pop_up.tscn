@@ -234,6 +234,6 @@ offset_top = 871.0
 offset_right = 1472.6057
 offset_bottom = 972.0
 texture_normal = ExtResource("6_fy1y3")
-texture_pressed = ExtResource("7_o5fxh")
+texture_hover = ExtResource("7_o5fxh")
 stretch_mode = 0
 flip_h = true

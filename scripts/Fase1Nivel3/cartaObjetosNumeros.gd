@@ -6,6 +6,7 @@ signal clicked(carta: CartaSelecionavel)
 @onready var textura_frente: Sprite2D = $TexturaFrente
 @onready var colisao: CollisionShape2D = $CollisionShape2D
 
+
 var isSelected: bool = false
 var isLocked: bool = false
 var id: int = -1
@@ -46,11 +47,17 @@ func combina(outra: CartaSelecionavel) -> bool:
 	return valor == outra.valor
 
 
-func selecionar() -> void:
+func selecionar(acertos: int) -> void:
 	if isLocked or isSelected:
 		return
 	isSelected = true
-	textura_frente.modulate = Color(1.0, 1.0, 0.6)   # Trocar por animação
+	if acertos == 0:
+		textura_frente.modulate = Color("fff28c")
+	elif acertos == 1:
+		textura_frente.modulate = Color("a6d9ff")
+	else:
+		textura_frente.modulate = Color("b3ffb3")
+	
 
 
 func deselecionar() -> void:

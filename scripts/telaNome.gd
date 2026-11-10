@@ -5,8 +5,6 @@ extends Node2D
 
 
 func _ready() -> void:
-	print(campoNome)
-	print(botaoComecar)
 	botaoComecar.pressed.connect(aoApertarComecar)
 
 func aoApertarComecar() -> void:

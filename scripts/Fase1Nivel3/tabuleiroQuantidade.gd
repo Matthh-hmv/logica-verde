@@ -6,6 +6,10 @@ class_name TabuleiroQuantidade
 
 const CARTA_OBJETO := preload("res://cenas/fase 1.3/carta_objetos.tscn")
 const CARTA_NUMERO := preload("res://cenas/fase 1.3/carta_numeros.tscn")
+const POPUP := preload("res://cenas/pop_up.tscn")
+var popup: popUpBase
+@onready var anim: AnimationPlayer = $AnimationPlayer
+
 
 # Centro de cada carta, em pixels da imagem original do tabuleiro (1384x1000)
 const X_OBJETO := 480.0
@@ -24,6 +28,9 @@ var comparaDelay: float = 0.6
 func _ready() -> void:
 	if variante == 0:
 		variante = randi_range(1, 2)
+	popup = POPUP.instantiate()
+	popup.visible = false
+	$CanvasLayer.add_child(popup)
 	criaTabuleiro()
 	setupTimer()
 
@@ -92,7 +99,7 @@ func cartaClicada(carta: CartaSelecionavel) -> void:
 			selecao.erase(outra)
 			break
 
-	carta.selecionar()
+	carta.selecionar(acertos)
 	selecao.append(carta)
 
 	if selecao.size() == 2:
@@ -106,7 +113,6 @@ func setupTimer() -> void:
 	comparaCarta.one_shot = true
 	add_child(comparaCarta)
 	comparaCarta.timeout.connect(comparaTimeout)
-
 
 func comparaTimeout() -> void:
 	if selecao.size() < 2:
@@ -127,7 +133,7 @@ func comparaTimeout() -> void:
 	else:
 		a.deselecionar()
 		b.deselecionar()
-
+		await popup.erroPar()
 	lockInput = false
 
 

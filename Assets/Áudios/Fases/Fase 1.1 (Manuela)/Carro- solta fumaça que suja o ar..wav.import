@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://1o1sj6176sqe"
+path="res://.godot/imported/Carro- solta fumaça que suja o ar..wav-9ab54a1067a7d9856eb4679e21687114.sample"
+
+[deps]
+
+source_file="res://Assets/Áudios/Fases/Fase 1.1 (Manuela)/Carro- solta fumaça que suja o ar..wav"
+dest_files=["res://.godot/imported/Carro- solta fumaça que suja o ar..wav-9ab54a1067a7d9856eb4679e21687114.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

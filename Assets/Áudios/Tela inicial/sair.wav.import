@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cwuhrmxikugvl"
+path="res://.godot/imported/sair.wav-899f88e2f5a764f99ac1ad89d2287e23.sample"
+
+[deps]
+
+source_file="res://Assets/Áudios/Tela inicial/sair.wav"
+dest_files=["res://.godot/imported/sair.wav-899f88e2f5a764f99ac1ad89d2287e23.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

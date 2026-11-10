@@ -7,6 +7,22 @@ class_name popUpBase
 @onready var botao: TextureButton = $BotaoContinuar
 var id:= -1
 
+const PASTA_AUDIO := "res://Assets/Áudios/Fases/Fase 1.1 (Manuela)/"
+
+const AUDIO_CONTINUAR := PASTA_AUDIO + "Continuar.wav"
+const AUDIO_ERRO := PASTA_AUDIO + "Ops, essas cartas não são pares!.wav"
+const AUDIO_VITORIA := PASTA_AUDIO + "Parabéns! Você achou todos os pares!.wav"
+
+const listaAudioNivel := {
+	1: {
+		0: PASTA_AUDIO + "Carro- solta fumaça que suja o ar..wav",
+		1: PASTA_AUDIO + "Copo de plástico- usamos uma vez e jogamos fora.wav",
+		2: PASTA_AUDIO + "Garrafa de plástico- usamos uma vez e vira lixo.wav",
+		3: PASTA_AUDIO + "Moto- queima combustível e solta fumaça.wav",
+		4: PASTA_AUDIO + "Sacola de plástico - usamos uma vez e vira lixo.wav"
+	}
+}
+
 
 var listaObjetoNivel:Dictionary = {
 	1: {
@@ -45,20 +61,24 @@ var listaTextoNivel:Dictionary ={
 func _ready() -> void:
 	botao.hide()
 	visible = false
+	botao.mouse_entered.connect(Narrador.falar.bind(AUDIO_CONTINUAR))
+	botao.focus_entered.connect(Narrador.falar.bind(AUDIO_CONTINUAR))
 
-	
-#Textura do popUp
 
 func mostraPopUp(newId:int, nivel: int) -> void:
 	id = newId
 	setTexturaId(nivel)
 	await get_tree().create_timer(1).timeout
 	anim.play("abrePopUp")
-	anim.advance(0) #tira Bug de visualização que estava dando
+	anim.advance(0)
 	visible = true
 	await anim.animation_finished
+
+	# o botão só aparece depois que o aluno ouvir tudo
+	if listaAudioNivel.has(nivel) and listaAudioNivel[nivel].has(id):
+		await Narrador.falarEEsperar(listaAudioNivel[nivel][id])
+
 	botao.show()
-	# Aqui onde vai narrar o texto
 	await botao.pressed
 	botao.hide()
 	anim.play("fechaPopUp")
@@ -78,16 +98,17 @@ func setTexturaId(nivel: int) -> void: #muda a textura da carta
 func erroPar() -> void:
 	anim.play("abreErro")
 	visible = true
-	#Colocar narração de erro
-	await get_tree().create_timer(2).timeout 
+	await Narrador.falarEEsperar(AUDIO_ERRO)
+	await get_tree().create_timer(0.5).timeout
 	anim.play("fechaErro")
 	await anim.animation_finished
 	visible = false
 
+
 func finalizaMemoria() -> void:
 	anim.play("abreVitoria")
 	visible = true
-	#Colocar narração de vitoria
+	await Narrador.falarEEsperar(AUDIO_VITORIA)
 	botao.show()
 	await botao.pressed
 	botao.hide()

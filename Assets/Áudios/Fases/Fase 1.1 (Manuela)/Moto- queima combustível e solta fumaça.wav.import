@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b8h620ur3am8n"
+path="res://.godot/imported/Moto- queima combustível e solta fumaça.wav-5f146927ee19b38abaa1f72544855d68.sample"
+
+[deps]
+
+source_file="res://Assets/Áudios/Fases/Fase 1.1 (Manuela)/Moto- queima combustível e solta fumaça.wav"
+dest_files=["res://.godot/imported/Moto- queima combustível e solta fumaça.wav-5f146927ee19b38abaa1f72544855d68.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

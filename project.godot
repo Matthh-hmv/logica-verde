@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Navegacao="*uid://wwx1wodji11t"
 Aluno="*uid://bw62qtq267p5a"
+Narrador="*uid://7xn3xs5cgted"
 
 [display]
 
