@@ -4,16 +4,12 @@ func _ready() -> void:
 	_preparar_tela(self)
 
 func executar(d: Dictionary, chances: int) -> bool:
-	# quadro da pergunta (imagem pronta)
-	$Imagem.texture = load(d["imagem_pergunta"])
-
-	# cartas (nome + imagem, vindas do banco)
+	# só as 2 cartas mudam (nome + imagem)
 	var botoes = $Opcoes.get_children()
 	for i in botoes.size():
 		botoes[i].text = d["opcoes"][i]["nome"]
 		var caminho: String = d["opcoes"][i].get("imagem", "")
-		if caminho != "":
-			botoes[i].icon = load(caminho)
+		botoes[i].icon = load(caminho) if caminho != "" else null
 
 	var acertou: bool = await _perguntar(self, botoes, d["certa"], chances,
 			"Temos uma opção melhor!\n\nTente novamente")

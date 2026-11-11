@@ -43,7 +43,7 @@ tipo = 1
 cima = NodePath("../posicaoV1")
 direita = NodePath("../posicao10")
 
-[node name="estrela" type="Sprite2D" parent="posicaoA1" unique_id=1590633046]
+[node name="Estrela" type="Sprite2D" parent="posicaoA1" unique_id=1590633046]
 visible = false
 texture_filter = 1
 texture = ExtResource("5_ax84u")
@@ -66,7 +66,7 @@ script = ExtResource("3_ji4pw")
 tipo = 2
 cima = NodePath("../posicao4")
 
-[node name="estrela" type="Sprite2D" parent="posicaoV1" unique_id=580170033]
+[node name="Estrela" type="Sprite2D" parent="posicaoV1" unique_id=580170033]
 visible = false
 texture_filter = 1
 texture = ExtResource("5_ax84u")
@@ -85,7 +85,7 @@ tipo = 1
 esquerda = NodePath("../posicao12")
 direita = NodePath("../posicaoV2")
 
-[node name="estrela" type="Sprite2D" parent="posicaoA2" unique_id=1748168296]
+[node name="Estrela" type="Sprite2D" parent="posicaoA2" unique_id=1748168296]
 visible = false
 texture_filter = 1
 texture = ExtResource("5_ax84u")
@@ -120,7 +120,7 @@ script = ExtResource("3_ji4pw")
 tipo = 2
 cima = NodePath("../posicao7")
 
-[node name="estrela" type="Sprite2D" parent="posicaoV2" unique_id=988816949]
+[node name="Estrela" type="Sprite2D" parent="posicaoV2" unique_id=988816949]
 visible = false
 texture_filter = 1
 texture = ExtResource("5_ax84u")
@@ -139,7 +139,7 @@ tipo = 1
 eh_escola = true
 direita = NodePath("../posicao9")
 
-[node name="estrela" type="Sprite2D" parent="posicaoA3" unique_id=1912973890]
+[node name="Estrela" type="Sprite2D" parent="posicaoA3" unique_id=1912973890]
 visible = false
 texture_filter = 1
 position = Vector2(1, -2)
@@ -195,7 +195,6 @@ offset_left = 0.0
 offset_top = 2.0
 offset_right = 592.0
 offset_bottom = 824.0
-mouse_filter = 2
 
 [node name="PainelSustentavel" parent="Painel" unique_id=1778547074 instance=ExtResource("5_fu7a6")]
 layout_mode = 0
@@ -203,7 +202,6 @@ offset_left = 0.0
 offset_top = 2.0
 offset_right = 592.0
 offset_bottom = 822.0
-mouse_filter = 2
 
 [connection signal="pressed" from="Botao Direita" to="." method="_on_botao_direita_pressed"]
 [connection signal="pressed" from="Botao Esquerda" to="." method="_on_botao_esquerda_pressed"]

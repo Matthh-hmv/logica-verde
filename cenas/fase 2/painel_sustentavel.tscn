@@ -1,25 +1,65 @@
 [gd_scene format=3 uid="uid://duoewodlv202d"]
 
 [ext_resource type="Script" uid="uid://cydtmwqvpopep" path="res://scripts/Fase2/painel_sustentavel.gd" id="1_jby47"]
+[ext_resource type="Texture2D" uid="uid://bnyigbu7wvf06" path="res://Assets/Fundos e telas/Fase 2/board objetos.png" id="2_fslty"]
+[ext_resource type="FontFile" uid="uid://yl60uq2i64fx" path="res://Assets/Fontes/Minecraft.ttf" id="3_p8uox"]
 
 [node name="PainelSustentavel" type="Control" unique_id=1778547074]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 1289.0
-offset_top = 115.0
-offset_right = 1897.0
-offset_bottom = 947.0
+offset_left = 1293.0
+offset_top = 117.0
+offset_right = 1885.0
+offset_bottom = 951.0
+mouse_filter = 2
 script = ExtResource("1_jby47")
 
-[node name="Imagem" type="TextureRect" parent="." unique_id=371241115]
+[node name="Fundo" type="TextureRect" parent="." unique_id=371241115]
 texture_filter = 1
-layout_mode = 0
-offset_left = 10.0
-offset_top = 8.0
-offset_right = 591.0
-offset_bottom = 832.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 5.0
+offset_right = 3.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_fslty")
 expand_mode = 1
 stretch_mode = 5
+
+[node name="Opcoes" type="HBoxContainer" parent="." unique_id=1670282542]
+clip_contents = true
+layout_mode = 0
+offset_left = 72.0
+offset_top = 375.0
+offset_right = 530.0
+offset_bottom = 660.0
+theme_override_constants/separation = 18
+
+[node name="Opcao0" type="Button" parent="Opcoes" unique_id=1036857926]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/icon_max_width = 210
+theme_override_fonts/font = ExtResource("3_p8uox")
+theme_override_font_sizes/font_size = 22
+autowrap_mode = 2
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+
+[node name="Opcao1" type="Button" parent="Opcoes" unique_id=593982955]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/icon_max_width = 210
+theme_override_fonts/font = ExtResource("3_p8uox")
+theme_override_font_sizes/font_size = 22
+autowrap_mode = 2
+icon_alignment = 1
 
 [node name="Resposta" type="Button" parent="." unique_id=2068514741]
 layout_mode = 0
@@ -27,23 +67,10 @@ offset_left = 72.0
 offset_top = 376.0
 offset_right = 528.0
 offset_bottom = 664.0
-flat = true
-
-[node name="Opcoes" type="HBoxContainer" parent="." unique_id=1670282542]
-layout_mode = 0
-offset_left = 74.0
-offset_top = 376.0
-offset_right = 540.0
-offset_bottom = 664.0
-
-[node name="Opcao0" type="Button" parent="Opcoes" unique_id=1036857926]
-layout_mode = 2
-
-[node name="Opcao1" type="Button" parent="Opcoes" unique_id=593982955]
-layout_mode = 2
 
 [node name="Mensagem" type="Button" parent="." unique_id=947673451]
-visible = false
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 72.0
+offset_top = 375.0
+offset_right = 530.0
+offset_bottom = 660.0

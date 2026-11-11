@@ -2,22 +2,26 @@ extends PainelDesafio
 
 func _ready() -> void:
 	_preparar_tela($Conta)
+	_limpar($Contexto/Continuar)
+	_limpar($Conta/Resposta)
+	_cor_texto($Conta/Resposta, Color.BLACK)
 
 func _subtela(nome: String) -> void:
 	$Contexto.visible = (nome == "Contexto")
 	$Conta.visible = (nome == "Conta")
 
 func executar(d: Dictionary, chances: int) -> bool:
-	# 1) contexto (imagem pronta)
-	$Contexto/Imagem.texture = load(d["imagem_contexto"])
+	# 1) contexto: só o texto do enunciado muda
+	$Contexto/Texto.text = d["contexto"]
 	_subtela("Contexto")
 	await $Contexto/Continuar.pressed
 
-	# 2) conta (imagem pronta com a caixa vazia)
-	$Conta/Imagem.texture = load(d["imagem_conta"])
+	# 2) conta: os 4 números e os 3 resultados mudam
+	var tiles = [$Conta/Tile1, $Conta/Tile2, $Conta/Tile3, $Conta/Tile4]
+	for i in 4:
+		tiles[i].text = d["tiles"][i]
 	var resposta: Button = $Conta/Resposta
 	_limpar(resposta)
-	resposta.flat = true
 	resposta.text = ""
 	var botoes = $Conta/Opcoes.get_children()
 	for i in botoes.size():
@@ -27,7 +31,6 @@ func executar(d: Dictionary, chances: int) -> bool:
 	var acertou: bool = await _perguntar($Conta, botoes, d["certa"], chances,
 			"Resposta errada, tente outra opção!")
 	if acertou:
-		resposta.flat = false
 		_pintar(resposta, COR_CERTA)
 		resposta.text = d["opcoes"][d["certa"]]
 		await _mensagem($Conta, "Parabéns, você acertou!", COR_CERTA, true)

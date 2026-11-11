@@ -1,14 +1,18 @@
 [gd_scene format=3 uid="uid://cdsp2w5i3gptn"]
 
 [ext_resource type="Script" uid="uid://dgo1bbl8eknjt" path="res://scripts/Fase2/painel_conta.gd" id="1_ccc3w"]
+[ext_resource type="Texture2D" uid="uid://dnxtxhs8atb4e" path="res://Assets/Fundos e telas/Fase 2/board contexto.png" id="2_yg20a"]
+[ext_resource type="Texture2D" uid="uid://dn45dn5ujmqdt" path="res://Assets/Fundos e telas/Fase 2/board contas.png" id="3_vrt06"]
+[ext_resource type="FontFile" uid="uid://yl60uq2i64fx" path="res://Assets/Fontes/Minecraft.ttf" id="4_vrt06"]
 
 [node name="PainelConta" type="Control" unique_id=575845702]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 1293.0
 offset_top = 117.0
-offset_right = 1893.0
-offset_bottom = 944.0
+offset_right = 1885.0
+offset_bottom = 951.0
+mouse_filter = 2
 script = ExtResource("1_ccc3w")
 
 [node name="Contexto" type="Control" parent="." unique_id=1298723394]
@@ -18,21 +22,38 @@ offset_top = 5.0
 offset_right = 595.0
 offset_bottom = 825.0
 
-[node name="Imagem" type="TextureRect" parent="Contexto" unique_id=687514950]
+[node name="Fundo" type="TextureRect" parent="Contexto" unique_id=687514950]
 texture_filter = 1
-layout_mode = 0
-offset_top = -2.0
-offset_right = 592.0
-offset_bottom = 822.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_yg20a")
 expand_mode = 1
-stretch_mode = 5
+
+[node name="Texto" type="Label" parent="Contexto" unique_id=1194556438]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 60.0
+offset_right = 512.0
+offset_bottom = 595.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_vrt06")
+theme_override_font_sizes/font_size = 40
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
 
 [node name="Continuar" type="Button" parent="Contexto" unique_id=162932442]
 layout_mode = 0
-offset_left = 31.0
-offset_top = 643.0
-offset_right = 567.0
-offset_bottom = 795.0
+offset_left = 33.0
+offset_top = 646.0
+offset_right = 563.0
+offset_bottom = 791.0
+theme_override_fonts/font = ExtResource("4_vrt06")
 flat = true
 
 [node name="Conta" type="Control" parent="." unique_id=1310709016]
@@ -41,44 +62,106 @@ offset_left = 3.0
 offset_top = 2.0
 offset_right = 595.0
 offset_bottom = 829.0
+mouse_filter = 2
 
-[node name="Imagem" type="TextureRect" parent="Conta" unique_id=1727766744]
+[node name="Fundo" type="TextureRect" parent="Conta" unique_id=1727766744]
 texture_filter = 1
 layout_mode = 0
 offset_top = 1.0
 offset_right = 592.0
 offset_bottom = 824.0
+mouse_filter = 2
+texture = ExtResource("3_vrt06")
 expand_mode = 1
-stretch_mode = 5
+
+[node name="Tile1" type="Label" parent="Conta" unique_id=1042523703]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 75.0
+offset_right = 292.0
+offset_bottom = 220.0
+theme_override_fonts/font = ExtResource("4_vrt06")
+theme_override_font_sizes/font_size = 90
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Tile2" type="Label" parent="Conta" unique_id=1066272329]
+layout_mode = 0
+offset_left = 305.0
+offset_top = 75.0
+offset_right = 470.0
+offset_bottom = 220.0
+theme_override_fonts/font = ExtResource("4_vrt06")
+theme_override_font_sizes/font_size = 90
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Tile3" type="Label" parent="Conta" unique_id=345109878]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 235.0
+offset_right = 292.0
+offset_bottom = 380.0
+theme_override_fonts/font = ExtResource("4_vrt06")
+theme_override_font_sizes/font_size = 90
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Tile4" type="Label" parent="Conta" unique_id=600938847]
+layout_mode = 0
+offset_left = 305.0
+offset_top = 235.0
+offset_right = 470.0
+offset_bottom = 380.0
+theme_override_fonts/font = ExtResource("4_vrt06")
+theme_override_font_sizes/font_size = 90
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Resposta" type="Button" parent="Conta" unique_id=667507597]
 layout_mode = 0
-offset_left = 119.0
+offset_left = 121.0
 offset_top = 428.0
-offset_right = 479.0
-offset_bottom = 584.0
-flat = true
+offset_right = 476.0
+offset_bottom = 582.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.190552, 0.49635738, 3.85046e-07, 1)
+theme_override_fonts/font = ExtResource("4_vrt06")
+theme_override_font_sizes/font_size = 30
 
 [node name="Opcoes" type="HBoxContainer" parent="Conta" unique_id=1234088942]
 layout_mode = 0
-offset_left = 30.0
-offset_top = 643.0
-offset_right = 566.0
+offset_left = 33.0
+offset_top = 650.0
+offset_right = 564.0
 offset_bottom = 795.0
+theme_override_constants/separation = 20
 
 [node name="Opcao0" type="Button" parent="Conta/Opcoes" unique_id=2098060039]
 layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("4_vrt06")
+theme_override_font_sizes/font_size = 70
 
 [node name="Opcao1" type="Button" parent="Conta/Opcoes" unique_id=320347776]
 layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("4_vrt06")
+theme_override_font_sizes/font_size = 70
 
 [node name="Opcao2" type="Button" parent="Conta/Opcoes" unique_id=1227369210]
 layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("4_vrt06")
+theme_override_font_sizes/font_size = 70
 
 [node name="Mensagem" type="Button" parent="Conta" unique_id=76997675]
 layout_mode = 0
-offset_left = 34.0
-offset_top = 645.0
-offset_right = 566.0
+offset_left = 33.0
+offset_top = 647.0
+offset_right = 564.0
 offset_bottom = 792.0
-flat = true
+theme_override_fonts/font = ExtResource("4_vrt06")
+autowrap_mode = 2
+
+[connection signal="pressed" from="Contexto/Continuar" to="." method="_on_continuar_pressed"]
