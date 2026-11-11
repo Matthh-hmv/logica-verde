@@ -7,7 +7,7 @@ func executar(d: Dictionary, chances: int) -> bool:
 	# só as 2 cartas mudam (nome + imagem)
 	var botoes = $Opcoes.get_children()
 	for i in botoes.size():
-		botoes[i].text = d["opcoes"][i]["nome"]
+		botoes[i].text = d["opcoes"][i]["nome"].to_upper()
 		var caminho: String = d["opcoes"][i].get("imagem", "")
 		botoes[i].icon = load(caminho) if caminho != "" else null
 

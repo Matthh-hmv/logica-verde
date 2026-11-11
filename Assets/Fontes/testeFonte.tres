@@ -1,0 +1,8 @@
+[gd_resource type="FontVariation" format=3 uid="uid://cp24mrk826eef"]
+
+[ext_resource type="FontFile" uid="uid://yl60uq2i64fx" path="res://Assets/Fontes/Minecraft.ttf" id="1_pqdud"]
+
+[resource]
+base_font = ExtResource("1_pqdud")
+spacing_glyph = 2
+spacing_top = 2

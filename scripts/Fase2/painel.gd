@@ -8,6 +8,7 @@ func mostrar_direcoes(_texto := "") -> void:
 	$PainelConta.hide()
 	$PainelSustentavel.hide()
 
+
 func executar_conta(d: Dictionary, chances: int) -> bool:
 	$PainelConta.show()
 	var acertou: bool = await $PainelConta.executar(d, chances)
@@ -19,3 +20,4 @@ func executar_sustentavel(d: Dictionary, chances: int) -> bool:
 	var acertou: bool = await $PainelSustentavel.executar(d, chances)
 	$PainelSustentavel.hide()
 	return acertou
+	

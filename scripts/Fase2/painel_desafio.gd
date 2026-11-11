@@ -18,7 +18,7 @@ func _preparar_tela(tela: Control) -> void:
 		botoes[i].pressed.connect(_ao_clicar_opcao.bind(i))
 		_limpar(botoes[i])
 		_cor_texto(botoes[i], Color.BLACK)
-	_cor_texto(tela.get_node("Mensagem"), Color.WHITE)
+	_cor_texto(tela.get_node("Mensagem"), Color.BLACK)
 
 func _ao_clicar_opcao(i: int) -> void:
 	opcao_escolhida.emit(i)
@@ -63,7 +63,7 @@ func _mensagem(tela: Control, texto: String, cor: Color, esperar_clique: bool) -
 	var msg: Button = tela.get_node("Mensagem")
 	tela.get_node("Opcoes").hide()
 	_pintar(msg, cor)
-	msg.text = texto
+	msg.text = texto.to_upper()
 	msg.show()
 	if esperar_clique:
 		await msg.pressed

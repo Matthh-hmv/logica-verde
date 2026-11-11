@@ -38,11 +38,25 @@ const CONTAS := [
 		"final": "Ainda funcionam 21 lixeiras. Vamos consertar as outras para reciclar mais!",
 	},
 	{
-		"contexto": "Cada turma plantou 12 mudas de árvore, e foram 4 turmas.\n\nQuantas mudas foram plantadas?",
-		"tiles": ["1", "2", "x", "4"],
-		"opcoes": ["16", "46", "48"], "certa": 2,
-		"final": "Foram 48 mudas! A cidade vai ficar mais verde e fresca.",
+		"contexto": "A rua da escola tinha 45 lâmpadas antigas, e a prefeitura já trocou 8 por luzes de LED.\n\nQuantas lâmpadas ainda faltam trocar?",
+		"tiles": ["4", "5", "-", "8"],
+		"opcoes": ["53", "37", "36"], "certa": 1,
+		"final": "Faltam 37 lâmpadas. As luzes de LED iluminam melhor e gastam menos energia!",
 	},
+	
+	{
+		"contexto": "No ponto de reciclagem foram entregues 26 garrafas de vidro de manhã e mais 7 à tarde.\n\nQuantas garrafas foram recicladas?",
+		"tiles": ["2", "6", "+", "7"],
+		"opcoes": ["19", "32", "33"], "certa": 2,
+		"final": "Foram 33 garrafas! Reciclar o lixo mantém as ruas e os rios da cidade limpos.",
+	},
+	
+	{
+		"contexto": "Na horta comunitária do bairro colhemos 34 alfaces ontem e mais 5 hoje.\n\nQuantas alfaces colhemos no total?",
+		"tiles": ["3", "4", "+", "5"],
+		"opcoes": ["39", "29", "38"], "certa": 0,
+		"final": "Colhemos 39 alfaces! Produzir comida perto de casa deixa a cidade mais saudável.",
+	}
 ]
 
 # SUSTENTAVEIS

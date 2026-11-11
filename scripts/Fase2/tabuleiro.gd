@@ -64,6 +64,7 @@ func _bloqueado() -> void:
 
 func _chegou(casa: Casa) -> void:
 	if casa.eh_escola:
+		painel.executar_fim()
 		print("Chegou na escola!")
 		return
 	if casa.completada or casa.desafio.is_empty():
