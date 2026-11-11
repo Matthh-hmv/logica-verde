@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c0wujfwy386eg"
+path="res://.godot/imported/Duas bicicletas.wav-9b7600c715e8492bb3452a5188b5e979.sample"
+
+[deps]
+
+source_file="res://Assets/Áudios/Fases/Fase 1.3 (Matheus)/Duas bicicletas.wav"
+dest_files=["res://.godot/imported/Duas bicicletas.wav-9b7600c715e8492bb3452a5188b5e979.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

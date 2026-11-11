@@ -7,6 +7,9 @@ class_name TabuleiroQuantidade
 const CARTA_OBJETO := preload("res://cenas/fase 1.3/carta_objetos.tscn")
 const CARTA_NUMERO := preload("res://cenas/fase 1.3/carta_numeros.tscn")
 const POPUP := preload("res://cenas/pop_up.tscn")
+const PASTA_AUDIO := "res://Assets/Áudios/Fases/Fase 1.3 (Matheus)/"
+const AUDIO_INSTRUCAO := PASTA_AUDIO + "Nível 3, selecione a carta dos objetos.wav"
+
 var popup: popUpBase
 @onready var anim: AnimationPlayer = $AnimationPlayer
 
@@ -124,6 +127,9 @@ func comparaTimeout() -> void:
 	var b := selecao[1]
 	selecao.clear()
 
+	# espera terminar de narrar a segunda carta
+	await Narrador.esperarTerminar()
+
 	if a.combina(b):
 		a.par()
 		b.par()
@@ -133,11 +139,15 @@ func comparaTimeout() -> void:
 	else:
 		a.deselecionar()
 		b.deselecionar()
-		await popup.erroPar()
+		var popup: popUpBase = POPUP.instantiate()
+		$CanvasLayer.add_child(popup)
+		await popup.erroPar(3)
+		popup.queue_free()
+
 	lockInput = false
 
 
 func terminouNivel() -> void:
-	# TODO: ir para a próxima cena
+	await popup.finalizaMemoria(3)
 	# get_tree().change_scene_to_file("res://cenas/...tscn")
 	pass

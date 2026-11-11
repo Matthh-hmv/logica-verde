@@ -8,17 +8,26 @@ signal clicked(carta: CartaBase)
 
 var isFlipped: bool = false
 var isLocked: bool = false
-const PASTA_AUDIO := "res://Assets/Áudios/Fases/Fase 1.1 (Manuela)/"
+const PASTA_AUDIO := {
+	1: "res://Assets/Áudios/Fases/Fase 1.1 (Manuela)/",
+	2: "res://Assets/Áudios/Fases/Fase 1.2 (Nickole)/"
+}
 
 const listaAudioPorNivel := {
 	1: {
-		0: PASTA_AUDIO + "Carro.wav",
-		1: PASTA_AUDIO + "Copo de plástico.wav",
-		2: PASTA_AUDIO + "Garrafa de plástico.wav",
-		3: PASTA_AUDIO + "Moto.wav",
-		4: PASTA_AUDIO + "Sacola de plástico.wav"
+		0: "Carro.wav",
+		1: "Copo de plástico.wav",
+		2: "Garrafa de plástico.wav",
+		3: "Moto.wav",
+		4: "Sacola de plástico.wav"
+	},
+	2: {
+		0: "Onibus.wav",
+		1: "Caneca.wav",
+		2: "Garrafa reutilizavel.wav",
+		3: "Bicicleta.wav",
+		4: "Ecobag.wav"
 	}
-	# nível 2: adicionar quando tiver os áudios
 }
 var nivelAtual: int = 1
 
@@ -72,13 +81,13 @@ func setTexturaId(nivel: int) -> void: #muda a textura da carta
 		return
 	textura_frente.texture = load(listaTextura[id])
 	
-func aberta() -> void: #carta fechada
+func aberta() -> void:
 	if isLocked or isFlipped:
 		return
 	isFlipped = true
 	anim.play("mostraCarta")
 	if listaAudioPorNivel.has(nivelAtual) and listaAudioPorNivel[nivelAtual].has(id):
-		Narrador.falar(listaAudioPorNivel[nivelAtual][id])
+		Narrador.falar(PASTA_AUDIO[nivelAtual] + listaAudioPorNivel[nivelAtual][id])
 	
 func fechada() -> void: #carta aberta
 	if isLocked:

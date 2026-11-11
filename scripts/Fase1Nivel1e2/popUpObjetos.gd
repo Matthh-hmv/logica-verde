@@ -6,23 +6,44 @@ class_name popUpBase
 @onready var anim: AnimationPlayer = $AnimationPlayer
 @onready var botao: TextureButton = $BotaoContinuar
 var id:= -1
+var nivelAtual: int = 1
 
-const PASTA_AUDIO := "res://Assets/Áudios/Fases/Fase 1.1 (Manuela)/"
-
-const AUDIO_CONTINUAR := PASTA_AUDIO + "Continuar.wav"
-const AUDIO_ERRO := PASTA_AUDIO + "Ops, essas cartas não são pares!.wav"
-const AUDIO_VITORIA := PASTA_AUDIO + "Parabéns! Você achou todos os pares!.wav"
-
-const listaAudioNivel := {
-	1: {
-		0: PASTA_AUDIO + "Carro- solta fumaça que suja o ar..wav",
-		1: PASTA_AUDIO + "Copo de plástico- usamos uma vez e jogamos fora.wav",
-		2: PASTA_AUDIO + "Garrafa de plástico- usamos uma vez e vira lixo.wav",
-		3: PASTA_AUDIO + "Moto- queima combustível e solta fumaça.wav",
-		4: PASTA_AUDIO + "Sacola de plástico - usamos uma vez e vira lixo.wav"
-	}
+const PASTA_AUDIO := {
+	1: "res://Assets/Áudios/Fases/Fase 1.1 (Manuela)/",
+	2: "res://Assets/Áudios/Fases/Fase 1.2 (Nickole)/",
+	3: "res://Assets/Áudios/Fases/Fase 1.3 (Matheus)/"
 }
 
+const AUDIO_CONTINUAR := "Continuar.wav"
+
+const AUDIO_ERRO := {
+	1: "Ops, essas cartas não são pares!.wav",
+	2: "Ops, essas cartas nao sao pares!.wav",
+	3: "Ops, essas cartas não são pares!.wav"
+}
+
+const AUDIO_VITORIA := {
+	1: "Parabéns! Você achou todos os pares!.wav",
+	2: "Parabens, você achou todos os pares!.wav",
+	3: "Parabens, você achou todos os pares!.wav"
+}
+
+const AUDIO_DESCRICAO := {
+	1: {
+		0: "Carro- solta fumaça que suja o ar..wav",
+		1: "Copo de plástico- usamos uma vez e jogamos fora.wav",
+		2: "Garrafa de plástico- usamos uma vez e vira lixo.wav",
+		3: "Moto- queima combustível e solta fumaça.wav",
+		4: "Sacola de plástico - usamos uma vez e vira lixo.wav"
+	},
+	2: {
+		0: "Onibus Popup.wav",
+		1: "Caneca Popup.wav",
+		2: "Garrafa reutilizavel Popup.wav",
+		3: "Bicicleta Popup.wav",
+		4: "Ecobag Popup.wav"
+	}
+}
 
 var listaObjetoNivel:Dictionary = {
 	1: {
@@ -61,22 +82,34 @@ var listaTextoNivel:Dictionary ={
 func _ready() -> void:
 	botao.hide()
 	visible = false
-	botao.mouse_entered.connect(Narrador.falar.bind(AUDIO_CONTINUAR))
-	botao.focus_entered.connect(Narrador.falar.bind(AUDIO_CONTINUAR))
+	botao.mouse_entered.connect(_falarContinuar)
+	botao.focus_entered.connect(_falarContinuar)
 
+
+# Monta o caminho completo do áudio de acordo com o nível
+func _caminho(arquivo: String) -> String:
+	return PASTA_AUDIO.get(nivelAtual, "") + arquivo
+
+
+func _falarContinuar() -> void:
+	Narrador.falar(_caminho(AUDIO_CONTINUAR))
+
+
+#Textura do popUp
 
 func mostraPopUp(newId:int, nivel: int) -> void:
 	id = newId
+	nivelAtual = nivel
 	setTexturaId(nivel)
 	await get_tree().create_timer(1).timeout
 	anim.play("abrePopUp")
-	anim.advance(0)
+	anim.advance(0) #tira Bug de visualização que estava dando
 	visible = true
 	await anim.animation_finished
 
 	# o botão só aparece depois que o aluno ouvir tudo
-	if listaAudioNivel.has(nivel) and listaAudioNivel[nivel].has(id):
-		await Narrador.falarEEsperar(listaAudioNivel[nivel][id])
+	if AUDIO_DESCRICAO.has(nivel) and AUDIO_DESCRICAO[nivel].has(id):
+		await Narrador.falarEEsperar(_caminho(AUDIO_DESCRICAO[nivel][id]))
 
 	botao.show()
 	await botao.pressed
@@ -95,20 +128,23 @@ func setTexturaId(nivel: int) -> void: #muda a textura da carta
 	objeto.texture = load(listaObjeto[id])
 	texto.texture = load(listaTexto[id])
 	
-func erroPar() -> void:
+func erroPar(nivel: int) -> void:
+	nivelAtual = nivel
 	anim.play("abreErro")
 	visible = true
-	await Narrador.falarEEsperar(AUDIO_ERRO)
+	if AUDIO_ERRO.has(nivel):
+		await Narrador.falarEEsperar(_caminho(AUDIO_ERRO[nivel]))
 	await get_tree().create_timer(0.5).timeout
 	anim.play("fechaErro")
 	await anim.animation_finished
 	visible = false
 
-
-func finalizaMemoria() -> void:
+func finalizaMemoria(nivel: int) -> void:
+	nivelAtual = nivel
 	anim.play("abreVitoria")
 	visible = true
-	await Narrador.falarEEsperar(AUDIO_VITORIA)
+	if AUDIO_VITORIA.has(nivel):
+		await Narrador.falarEEsperar(_caminho(AUDIO_VITORIA[nivel]))
 	botao.show()
 	await botao.pressed
 	botao.hide()

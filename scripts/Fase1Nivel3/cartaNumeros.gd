@@ -9,9 +9,18 @@ const TEXTURAS: Dictionary = {
 	4: "res://Assets/cartas fase 3/numero_5.png"
 }
 
+const AUDIOS: Dictionary = {
+	0: "Uma unidade.wav",
+	1: "Duas unidades.wav",
+	2: "Três unidades.wav",
+	3: "Quatro unidades.wav",
+	4: "Cinco unidades.wav"
+}
+
 func setTextura(newId: int) -> void:
 	id = newId
 	if not TEXTURAS.has(id):
 		push_error("CartaNumero: id %d não existe no dicionário" % id)
 		return
 	_aplicarTextura(TEXTURAS[id])
+	audioFala = PASTA_AUDIO + AUDIOS[id]

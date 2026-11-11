@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://drdkc5yocbiya"
+path="res://.godot/imported/Onibus Popup.wav-1dc87eae678b6a68a788489ecef8bab3.sample"
+
+[deps]
+
+source_file="res://Assets/Áudios/Fases/Fase 1.2 (Nickole)/Onibus Popup.wav"
+dest_files=["res://.godot/imported/Onibus Popup.wav-1dc87eae678b6a68a788489ecef8bab3.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -105,7 +105,7 @@ func comparaTimeout() -> void:
 		acertos += 1
 		await popup.mostraPopUp(a.id, nivel)
 		if acertos == 5:
-			await popup.finalizaMemoria()
+			await popup.finalizaMemoria(3)
 			if nivel == 1:
 				Navegacao.irPara("res://cenas/fase 1.1 e 1.2/fase_1_2.tscn")
 			else:
@@ -113,7 +113,7 @@ func comparaTimeout() -> void:
 	else:
 		a.fechada()
 		b.fechada()
-		await popup.erroPar()
+		await popup.erroPar(3)
 	popup.queue_free()
 	cartaSelecionada.clear()
 	lockInput = false

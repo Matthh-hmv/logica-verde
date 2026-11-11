@@ -19,6 +19,9 @@ func _ready() -> void:
 	botaoRelatorio.pressed.connect(onRelatorioPressed)
 	botaoSobre.pressed.connect(onSobrePressed)
 	botaoSair.pressed.connect(onSairPressed)
+	
+	# foco inicial ANTES de conectar a narração, para não falar ao abrir
+	botaoComecar.grab_focus()
 
 	_conectaNarracao(botaoComecar, AUDIOS["comecar"])
 	_conectaNarracao(botaoRelatorio, AUDIOS["relatorio"])

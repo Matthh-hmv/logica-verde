@@ -18,8 +18,26 @@ const TEXTURAS: Dictionary = {
 	}
 }
 
+const AUDIOS: Dictionary = {
+	1: {
+		0: "Uma bicicleta.wav",
+		1: "Duas garrafas.wav",
+		2: "Três canecas.wav",
+		3: "Quatro ônibus.wav",
+		4: "Cinco ecobags.wav"
+	},
+	2: {
+		0: "Uma ecobag.wav",
+		1: "Duas bicicletas.wav",
+		2: "Três garrafas.wav",
+		3: "Quatro canecas.wav",
+		4: "Cinco ônibus.wav"
+	}
+}
+
 func setTextura(newId: int, esc: int) -> void:
 	id = newId
 	if not TEXTURAS.has(esc) or not TEXTURAS[esc].has(id):
 		return
 	_aplicarTextura(TEXTURAS[esc][id])
+	audioFala = PASTA_AUDIO + AUDIOS[esc][id]

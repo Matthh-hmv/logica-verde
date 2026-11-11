@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://nv40gj81nv4r"
+path="res://.godot/imported/Duas garrafas.wav-40b99d97908a8afbf29994fb19083311.sample"
+
+[deps]
+
+source_file="res://Assets/Áudios/Fases/Fase 1.3 (Matheus)/Duas garrafas.wav"
+dest_files=["res://.godot/imported/Duas garrafas.wav-40b99d97908a8afbf29994fb19083311.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

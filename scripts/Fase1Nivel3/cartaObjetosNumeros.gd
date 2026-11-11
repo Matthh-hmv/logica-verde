@@ -11,7 +11,8 @@ var isSelected: bool = false
 var isLocked: bool = false
 var id: int = -1
 var valor: int = -1   # quantidade (carta de objeto) ou número (carta de número)
-
+const PASTA_AUDIO := "res://Assets/Áudios/Fases/Fase 1.3 (Matheus)/"
+var audioFala: String = ""   # preenchido pelas cartas filhas
 
 func _input_event(_viewport: Viewport, event: InputEvent, _shape_idx: int) -> void:
 	if isLocked:
@@ -57,6 +58,9 @@ func selecionar(acertos: int) -> void:
 		textura_frente.modulate = Color("a6d9ff")
 	else:
 		textura_frente.modulate = Color("b3ffb3")
+
+	if audioFala != "":
+		Narrador.falar(audioFala)
 	
 
 

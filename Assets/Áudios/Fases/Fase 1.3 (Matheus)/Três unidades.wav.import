@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bnin4uprnyvbi"
+path="res://.godot/imported/Três unidades.wav-e4e10def583a5e34e66ead8eac4f4d16.sample"
+
+[deps]
+
+source_file="res://Assets/Áudios/Fases/Fase 1.3 (Matheus)/Três unidades.wav"
+dest_files=["res://.godot/imported/Três unidades.wav-e4e10def583a5e34e66ead8eac4f4d16.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
