@@ -45,7 +45,8 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/icon_max_width = 210
 theme_override_fonts/font = ExtResource("3_p8uox")
-theme_override_font_sizes/font_size = 22
+theme_override_font_sizes/font_size = 28
+flat = true
 autowrap_mode = 2
 icon_alignment = 1
 vertical_icon_alignment = 0
@@ -57,16 +58,10 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/icon_max_width = 210
 theme_override_fonts/font = ExtResource("3_p8uox")
-theme_override_font_sizes/font_size = 22
+theme_override_font_sizes/font_size = 28
+flat = true
 autowrap_mode = 2
 icon_alignment = 1
-
-[node name="Resposta" type="Button" parent="." unique_id=2068514741]
-layout_mode = 0
-offset_left = 72.0
-offset_top = 376.0
-offset_right = 528.0
-offset_bottom = 664.0
 
 [node name="Mensagem" type="Button" parent="." unique_id=947673451]
 layout_mode = 0
