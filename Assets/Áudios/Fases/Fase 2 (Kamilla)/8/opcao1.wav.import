@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cpt8fbfax653y"
+path="res://.godot/imported/opcao1.wav-16c471892c3a606312144cb1ad2e3ead.sample"
+
+[deps]
+
+source_file="res://Assets/Áudios/Fases/Fase 2 (Kamilla)/8/opcao1.wav"
+dest_files=["res://.godot/imported/opcao1.wav-16c471892c3a606312144cb1ad2e3ead.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

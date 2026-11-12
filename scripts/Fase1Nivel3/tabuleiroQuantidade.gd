@@ -36,6 +36,7 @@ func _ready() -> void:
 	$CanvasLayer.add_child(popup)
 	criaTabuleiro()
 	setupTimer()
+	Narrador.nivelAtual = 3
 
 
 func criaTabuleiro() -> void:

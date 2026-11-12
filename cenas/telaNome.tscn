@@ -5,7 +5,7 @@
 [ext_resource type="FontFile" uid="uid://yl60uq2i64fx" path="res://Assets/Fontes/Minecraft.ttf" id="3_qq00o"]
 [ext_resource type="Texture2D" uid="uid://b1ulfkmddh8p6" path="res://Assets/ui/Botões/botao_comecar_verde_normal.png" id="4_qq00o"]
 [ext_resource type="Texture2D" uid="uid://b452rxpr7y6mr" path="res://Assets/ui/Botões/botao_comecar_verde_pressionado.png" id="5_nqwux"]
-[ext_resource type="PackedScene" uid="uid://clvjscry2leiy" path="res://cenas/botaoVoltar.tscn" id="6_nqwux"]
+[ext_resource type="PackedScene" uid="uid://clvjscry2leiy" path="res://cenas/Navegacao.tscn" id="6_nqwux"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e2ube"]
 bg_color = Color(0.6, 0.6, 0.6, 0)

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://sbkvt66m7cmq"
+path="res://.godot/imported/narracao.wav-0d9a31979cf2ec1fb6206b9698135f44.sample"
+
+[deps]
+
+source_file="res://Assets/Áudios/Fases/Fase 2 (Kamilla)/3/narracao.wav"
+dest_files=["res://.godot/imported/narracao.wav-0d9a31979cf2ec1fb6206b9698135f44.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

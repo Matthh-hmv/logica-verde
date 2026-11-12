@@ -4,6 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://c67ugeljdks1m" path="res://Assets/ui/Botões/botao - voltar.png" id="2_n2p5l"]
 [ext_resource type="Texture2D" uid="uid://g753jhjrax45" path="res://Assets/ui/Botões/botao - voltar - pressionado.png" id="3_s8vmx"]
 [ext_resource type="Script" uid="uid://1spwpe1rqi88" path="res://scripts/botao_voltar.gd" id="4_r30fv"]
+[ext_resource type="Texture2D" uid="uid://dooslofhg2v3d" path="res://Assets/ui/Botões/botao - Alto falante.png" id="5_37xlu"]
+[ext_resource type="Texture2D" uid="uid://cdox5dasn3a61" path="res://Assets/ui/Botões/botao - Alto falante pressionado.png" id="6_enss5"]
+[ext_resource type="Script" uid="uid://dukjg1oi7uv3g" path="res://scripts/botaoAudio.gd" id="7_enss5"]
 
 [node name="Navegacao" type="Node2D" unique_id=170738471]
 script = ExtResource("4_r30fv")
@@ -16,3 +19,12 @@ offset_bottom = 92.0
 texture_normal = ExtResource("2_n2p5l")
 texture_hover = ExtResource("3_s8vmx")
 script = ExtResource("1_icnr6")
+
+[node name="BotaoAudio" type="TextureButton" parent="." unique_id=1613579148]
+offset_left = 1770.0
+offset_top = 32.0
+offset_right = 1838.0
+offset_bottom = 100.0
+texture_normal = ExtResource("5_37xlu")
+texture_hover = ExtResource("6_enss5")
+script = ExtResource("7_enss5")

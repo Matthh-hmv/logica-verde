@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://6ly2s24fqpie" path="res://Assets/Fundos e telas/Fase 1_2.png" id="1_iox61"]
 [ext_resource type="PackedScene" uid="uid://btlmvi375ayuw" path="res://cenas/fase 1.1 e 1.2/tabuleiroMemoria.tscn" id="3_6je4f"]
-[ext_resource type="PackedScene" uid="uid://clvjscry2leiy" path="res://cenas/botaoVoltar.tscn" id="3_olgul"]
+[ext_resource type="PackedScene" uid="uid://clvjscry2leiy" path="res://cenas/Navegacao.tscn" id="3_olgul"]
 
 [node name="fase 1_2" type="Node2D" unique_id=539166240]
 

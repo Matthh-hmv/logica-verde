@@ -1,5 +1,7 @@
 extends Node
 
+var nivelAtual: int = 1
+
 var player := AudioStreamPlayer.new()
 
 func _ready() -> void:

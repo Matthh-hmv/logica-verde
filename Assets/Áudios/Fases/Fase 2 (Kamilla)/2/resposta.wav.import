@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bmnfklwsw0jim"
+path="res://.godot/imported/resposta.wav-c93cbe8f24fa69bf9c8c213fff45710f.sample"
+
+[deps]
+
+source_file="res://Assets/Áudios/Fases/Fase 2 (Kamilla)/2/resposta.wav"
+dest_files=["res://.godot/imported/resposta.wav-c93cbe8f24fa69bf9c8c213fff45710f.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dr0upg64yen25"
+path="res://.godot/imported/Qual o objeto mais sustentável.wav-4c48adfd7ba18b0b2f1b1ef180ec5f9e.sample"
+
+[deps]
+
+source_file="res://Assets/Áudios/Fases/Fase 2 (Kamilla)/geral/Qual o objeto mais sustentável.wav"
+dest_files=["res://.godot/imported/Qual o objeto mais sustentável.wav-4c48adfd7ba18b0b2f1b1ef180ec5f9e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

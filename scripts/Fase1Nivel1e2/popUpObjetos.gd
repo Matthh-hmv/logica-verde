@@ -17,15 +17,15 @@ const PASTA_AUDIO := {
 const AUDIO_CONTINUAR := "Continuar.wav"
 
 const AUDIO_ERRO := {
-	1: "Ops, essas cartas não são pares!.wav",
-	2: "Ops, essas cartas nao sao pares!.wav",
-	3: "Ops, essas cartas não são pares!.wav"
+	1: "res://Assets/Áudios/Fases/Fase 1.1 (Manuela)/Ops, essas cartas não são pares!.wav",
+	2: "res://Assets/Áudios/Fases/Fase 1.2 (Nickole)/Ops, essas cartas nao sao pares!.wav",
+	3: "res://Assets/Áudios/Fases/Fase 1.3 (Matheus)/Ops, essas cartas não são pares!.wav"
 }
 
 const AUDIO_VITORIA := {
-	1: "Parabéns! Você achou todos os pares!.wav",
-	2: "Parabens, você achou todos os pares!.wav",
-	3: "Parabens, você achou todos os pares!.wav"
+	1: "res://Assets/Áudios/Fases/Fase 1.1 (Manuela)/Parabéns! Você achou todos os pares!.wav",
+	2: "res://Assets/Áudios/Fases/Fase 1.2 (Nickole)/Parabens, você achou todos os pares!.wav",
+	3: "res://Assets/Áudios/Fases/Fase 1.3 (Matheus)/Parabens, você achou todos os pares!.wav"
 }
 
 const AUDIO_DESCRICAO := {

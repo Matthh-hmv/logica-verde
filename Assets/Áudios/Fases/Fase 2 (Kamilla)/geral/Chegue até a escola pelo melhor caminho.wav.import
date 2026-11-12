@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://nb5cjcff0qyk"
+path="res://.godot/imported/Chegue até a escola pelo melhor caminho.wav-6c500ebcfd8f9340c75707e61cc11a62.sample"
+
+[deps]
+
+source_file="res://Assets/Áudios/Fases/Fase 2 (Kamilla)/geral/Chegue até a escola pelo melhor caminho.wav"
+dest_files=["res://.godot/imported/Chegue até a escola pelo melhor caminho.wav-6c500ebcfd8f9340c75707e61cc11a62.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

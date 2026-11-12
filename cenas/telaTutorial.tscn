@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dn72yp52kua5m"]
+
+[ext_resource type="Script" uid="uid://dhldjoiyxyp0g" path="res://scripts/telaTutorial.gd" id="1_sb82e"]
+[ext_resource type="PackedScene" uid="uid://clvjscry2leiy" path="res://cenas/Navegacao.tscn" id="2_3twot"]
+
+[node name="TelaTutorial" type="Node2D" unique_id=237029456]
+script = ExtResource("1_sb82e")
+
+[node name="Navegacao" parent="." unique_id=170738471 instance=ExtResource("2_3twot")]
+
+[node name="BotaoAudio" parent="Navegacao" index="1" unique_id=1613579148]
+visible = false
+
+[editable path="Navegacao"]

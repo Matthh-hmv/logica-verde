@@ -17,6 +17,7 @@ var comparaCarta:Timer
 var comparaDelay:float = 0.6
 	
 func _ready() -> void:
+	Narrador.nivelAtual = nivel
 	criaTabuleiro()
 	setupTimer()
 	

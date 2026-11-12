@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://br0mljvevoaur" path="res://cenas/fase 1.3/tabuleiro_quantidade.tscn" id="1_4h7ms"]
 [ext_resource type="Texture2D" uid="uid://dksrbhtk7i1ml" path="res://Assets/Fundos e telas/Fase 1_3.png" id="1_lmkoj"]
-[ext_resource type="PackedScene" uid="uid://clvjscry2leiy" path="res://cenas/botaoVoltar.tscn" id="3_e5i1u"]
+[ext_resource type="PackedScene" uid="uid://clvjscry2leiy" path="res://cenas/Navegacao.tscn" id="3_e5i1u"]
 
 [node name="fase 1_3" type="Node2D" unique_id=1681988601]
 
