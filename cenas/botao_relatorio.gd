@@ -3,8 +3,6 @@ extends TextureButton
 @onready var botao_relatorio: TextureButton = $"."
 @onready var http_request: HTTPRequest = $HTTPRequest
 
-const RESEND_API_KEY = "re_YoLMHL1F_Mk9HYhx5i7w14hgXSaU8gRoN"
-
 func _ready() -> void:
 	botao_relatorio.pressed.connect(_on_botao_relatorio_pressed)
 	http_request.request_completed.connect(_on_resposta_api)
@@ -37,7 +35,7 @@ func _on_botao_relatorio_pressed() -> void:
 	
 	var headers = [
 		"Content-Type: application/json",
-		"Authorization: Bearer " + RESEND_API_KEY
+		"Authorization: Bearer " + resendKey.RESEND_API_KEY
 	]
 	
 	var url = "https://api.resend.com/emails"

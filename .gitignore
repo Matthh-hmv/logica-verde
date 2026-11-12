@@ -12,3 +12,5 @@ export/
 .env
 secrets.*
 *.local.cfg
+resendKey.gd
+resendKey.gd.uid
