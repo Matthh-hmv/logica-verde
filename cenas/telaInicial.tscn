@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bbu8qt8fwypdg" path="res://Assets/ui/Botões/botao-Começar-pressionado.png" id="4_8l0gg"]
 [ext_resource type="Texture2D" uid="uid://cqs7te55m87ub" path="res://Assets/ui/Botões/botao-Relatório.png" id="5_nweew"]
 [ext_resource type="Texture2D" uid="uid://clcbuvxjw3goj" path="res://Assets/ui/Botões/botao-Relatório-pressionado.png" id="6_smfe6"]
+[ext_resource type="Script" uid="uid://bv15xyqd4aeql" path="res://cenas/botao_relatorio.gd" id="7_7xrsl"]
 [ext_resource type="Texture2D" uid="uid://svx01xebbi8o" path="res://Assets/ui/Botões/botao-Sobre o Jogo.png" id="7_qlptd"]
 [ext_resource type="Texture2D" uid="uid://c1q7xhhnc1lhw" path="res://Assets/ui/Botões/botao-Sobre_o_Jogo-pressionado.png" id="8_pojna"]
 [ext_resource type="Texture2D" uid="uid://dlnpw2vuvlbc7" path="res://Assets/ui/Botões/botao-Sair.png" id="9_15u4s"]
@@ -37,6 +38,9 @@ offset_right = 1279.0
 offset_bottom = 721.0
 texture_normal = ExtResource("5_nweew")
 texture_hover = ExtResource("6_smfe6")
+script = ExtResource("7_7xrsl")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="BotaoRelatorio" unique_id=1099165444]
 
 [node name="BotaoSobre" type="TextureButton" parent="." unique_id=1491835011]
 offset_left = 559.0
