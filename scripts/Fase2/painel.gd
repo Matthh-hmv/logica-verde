@@ -13,6 +13,7 @@ func mostrar_final() -> void:
 	$PainelConta.hide()
 	$PainelSustentavel.hide()
 	$PainelFinal.show()
+	$PainelFinal.narrar_final()
 
 func executar_conta(d: Dictionary, chances: int) -> bool:
 	$PainelConta.show()

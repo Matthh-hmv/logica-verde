@@ -10,8 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://duoewodlv202d" path="res://cenas/fase 2/painel_sustentavel.tscn" id="8_0nxq2"]
 [ext_resource type="Script" uid="uid://cv5ct6g66c0jd" path="res://scripts/Fase2/painel_final.gd" id="9_najlc"]
 [ext_resource type="Texture2D" uid="uid://c8hoyo0lsci6h" path="res://Assets/Fundos e telas/Fase 2/board final.png" id="10_kgq07"]
-[ext_resource type="PackedScene" uid="uid://clvjscry2leiy" path="res://cenas/botaoVoltar.tscn" id="11_itciy"]
-[ext_resource type="Texture2D" uid="uid://dooslofhg2v3d" path="res://Assets/ui/Botões/botao - Alto falante.png" id="12_snnv2"]
+[ext_resource type="PackedScene" uid="uid://clvjscry2leiy" path="res://cenas/Navegacao.tscn" id="11_itciy"]
 
 [node name="Tabuleiro" type="Node2D" unique_id=1786066768 node_paths=PackedStringArray("casa_inicial")]
 script = ExtResource("1_najlc")
@@ -230,14 +229,9 @@ flat = true
 [node name="Navegacao" parent="." unique_id=170738471 instance=ExtResource("11_itciy")]
 position = Vector2(0, -10)
 
-[node name="BotaoAltoFalante" type="Sprite2D" parent="." unique_id=467099310]
-position = Vector2(1848, 56.000004)
-scale = Vector2(0.23437528, 0.21875001)
-texture = ExtResource("12_snnv2")
-
 [connection signal="pressed" from="Botao Direita" to="." method="_on_botao_direita_pressed"]
 [connection signal="pressed" from="Botao Esquerda" to="." method="_on_botao_esquerda_pressed"]
-[connection signal="pressed" from="Botao Cima" to="." method="_on_cima_pressed"]
 [connection signal="pressed" from="Botao Cima" to="." method="_on_botao_cima_pressed"]
+[connection signal="pressed" from="Botao Cima" to="." method="_on_cima_pressed"]
 [connection signal="pressed" from="Botao Baixo" to="." method="_on_botao_baixo_pressed"]
 [connection signal="pressed" from="Painel/PainelFinal/Continuar" to="." method="_ao_continuar"]

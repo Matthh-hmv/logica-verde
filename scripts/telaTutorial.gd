@@ -1,17 +1,23 @@
 extends Node2D
+#COLOCAR VIDEO FASE 2
+const VIDEOS := {
+	1: "res://Assets/Vídeos/Tutorial Fase 1.ogv",
+	2: "res://Assets/Vídeos/tutorial fase 2.ogv",   # <- confira o nome do arquivo
+}
+const PROXIMAS_CENAS := {
+	1: "res://cenas/fase 1.1 e 1.2/fase_1_1.tscn",
+	2: "res://cenas/fase 2/fase2.tscn",
+}
 
-# ============ AJUSTE AQUI ============
-const VIDEO := "res://Assets/Vídeos/Tutorial Fase 1.ogv"
-const PROXIMA_CENA := "res://cenas/fase 1.1 e 1.2/fase_1_1.tscn"  # cena que abre ao clicar em Continuar
+# true = no tutorial da fase 2 o botão Voltar é removido (voltaria para a fase 1 já concluída)
+const REMOVER_VOLTAR_NA_FASE_2 := true
 
-# Opcionais (deixe "" para usar o padrão)
 const FUNDO := "res://Assets/Fundos e telas/Fundo fases.png"
 const FONTE := "res://Assets/Fontes/Minecraft.ttf"
 
 # true = o botão Continuar só libera quando o vídeo terminar
 const EXIGIR_VIDEO_ATE_O_FIM := false
 
-# Áudios dos botões (deixe "" para não narrar)
 const AUDIO_CONTINUAR := "res://Assets/Áudios/Continuar.wav"
 const AUDIO_REVER := "res://Assets/Áudios/Rever o video.wav"
 const AUDIO_PAUSAR := ""    # "Pausar vídeo"
@@ -52,11 +58,22 @@ var botaoRever: Button
 var botaoContinuar: Button
 var botaoPausa: Button
 var _fonte: Font = null
+var _fase := 1
 
 
 func _ready() -> void:
+	# o tempo do aluno não conta enquanto ele assiste ao tutorial
+	Aluno.pausar_tempo()
+	_fase = Aluno.fase if VIDEOS.has(Aluno.fase) else 1
+
 	# nós colocados no editor (ex.: botão Voltar), para ficarem por cima no final
 	var existentes := get_children()
+
+	if _fase == 2 and REMOVER_VOLTAR_NA_FASE_2:
+		for no in existentes.duplicate():
+			if "oltar" in String(no.name):
+				existentes.erase(no)
+				no.queue_free()
 
 	if FONTE != "" and ResourceLoader.exists(FONTE):
 		_fonte = load(FONTE)
@@ -104,6 +121,8 @@ func _criaPainel() -> void:
 
 
 func _criaVideo() -> void:
+	var caminho: String = VIDEOS[_fase]
+
 	# fundo escuro atrás do vídeo
 	_criaCaixa(VIDEO_POS, VIDEO_TAM, Color("1f1f1f"), Color("1f1f1f"), 0, 6)
 
@@ -117,11 +136,11 @@ func _criaVideo() -> void:
 	video.gui_input.connect(_onVideoClicado)
 	add_child(video)
 
-	if ResourceLoader.exists(VIDEO):
-		video.stream = load(VIDEO)
+	if ResourceLoader.exists(caminho):
+		video.stream = load(caminho)
 	else:
 		var aviso := Label.new()
-		aviso.text = "Vídeo não encontrado:\n" + VIDEO
+		aviso.text = "Vídeo não encontrado:\n" + caminho
 		aviso.position = VIDEO_POS
 		aviso.size = VIDEO_TAM
 		aviso.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
@@ -129,7 +148,7 @@ func _criaVideo() -> void:
 		aviso.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 		_estiloTexto(aviso, 28, Color.WHITE)
 		add_child(aviso)
-		push_warning("Tutorial: vídeo não encontrado em " + VIDEO)
+		push_warning("Tutorial: vídeo não encontrado em " + caminho)
 
 	# moldura por cima do vídeo (centro transparente)
 	_criaCaixa(VIDEO_POS, VIDEO_TAM, Color(0, 0, 0, 0), COR_BORDA, BORDA_VIDEO, 6)
@@ -225,7 +244,7 @@ func _onReverPressed() -> void:
 
 func _onContinuarPressed() -> void:
 	video.stop()
-	Navegacao.irPara(PROXIMA_CENA)
+	Navegacao.irPara(PROXIMAS_CENAS[_fase])
 
 
 func _falarPausa() -> void:

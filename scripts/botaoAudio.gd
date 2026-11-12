@@ -9,16 +9,14 @@ const DICAS := {
 	3: PASTA + "Fase 1.3 (Matheus)/Nível 3, selecione a carta dos objetos.wav"
 }
 
-# Outras fases: escolha o .wav no Inspector (tem prioridade)
-@export_file("*.wav") var audioPersonalizado: String = ""
 
-@onready var botaoAjuda: TextureButton = $BotaoAjuda
+@export_file("*.wav") var audioPersonalizado: String = ""
 
 func _ready() -> void:
 	pressed.connect(onAjudaPressed)
 
 func onAjudaPressed() -> void:
-	if audioPersonalizado != "":
-		Narrador.falar(audioPersonalizado)
+	if Aluno.fase == 2:
+		Narrador.falar("res://Assets/Áudios/Fases/Fase 2 (Kamilla)/geral/Chegue até a escola pelo melhor caminho.wav")
 	elif DICAS.has(Narrador.nivelAtual):
 		Narrador.falar(DICAS[Narrador.nivelAtual])

@@ -13,13 +13,15 @@ const AUDIOS := {
 	"sair": "res://Assets/Áudios/Tela inicial/sair.wav",
 }
 
+var _popup: PopupRelatorio = null
+
 
 func _ready() -> void:
 	botaoComecar.pressed.connect(onComecarPressed)
 	botaoRelatorio.pressed.connect(onRelatorioPressed)
 	botaoSobre.pressed.connect(onSobrePressed)
 	botaoSair.pressed.connect(onSairPressed)
-	
+
 	# foco inicial ANTES de conectar a narração, para não falar ao abrir
 	botaoComecar.grab_focus()
 
@@ -27,9 +29,6 @@ func _ready() -> void:
 	_conectaNarracao(botaoRelatorio, AUDIOS["relatorio"])
 	_conectaNarracao(botaoSobre, AUDIOS["sobre"])
 	_conectaNarracao(botaoSair, AUDIOS["sair"])
-
-	# foco inicial para navegação por teclado (também narra o primeiro botão)
-	botaoComecar.grab_focus()
 
 
 # Narra ao passar o mouse e ao receber foco pelo teclado
@@ -42,10 +41,23 @@ func onComecarPressed() -> void:
 	Navegacao.irPara("res://cenas/telaNome.tscn")
 
 func onRelatorioPressed() -> void:
-	pass
+	_abrePopup(PopupRelatorio.Modo.RELATORIO)
 
 func onSobrePressed() -> void:
 	Navegacao.irPara("res://cenas/telaSobre.tscn")
 
 func onSairPressed() -> void:
-	get_tree().quit()
+	# sem relatório gravado (ninguém terminou o jogo), não há nada para enviar: sai direto
+	if not PopupRelatorio.temRelatorio():
+		get_tree().quit()
+		return
+	_abrePopup(PopupRelatorio.Modo.SAIR)
+
+
+func _abrePopup(modo: PopupRelatorio.Modo) -> void:
+	if _popup != null:
+		return
+	_popup = PopupRelatorio.new()
+	add_child(_popup)
+	_popup.fechado.connect(func() -> void: _popup = null)
+	_popup.abrir(modo)

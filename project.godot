@@ -13,7 +13,7 @@ config_version=5
 config/name="Lógica Verde"
 run/main_scene="uid://bnwml7p0avvra"
 config/features=PackedStringArray("4.7", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="uid://cdsusrwgmwgko"
 
 [autoload]
 

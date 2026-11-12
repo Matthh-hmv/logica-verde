@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cipl1yse8pqd5"]
+
+[ext_resource type="Script" uid="uid://bf5d4pkmv4lmo" path="res://scripts/tela_final.gd" id="1_85tbp"]
+
+[node name="telaFinal" type="Node2D" unique_id=1443741059]
+script = ExtResource("1_85tbp")

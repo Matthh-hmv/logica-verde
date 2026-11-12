@@ -1,5 +1,7 @@
 extends Node2D
 
+const AUDIO_INSTRUCAO := "res://Assets/Áudios/Fases/Fase 2 (Kamilla)/geral/Chegue até a escola pelo melhor caminho.wav"
+
 @onready var onibus: Sprite2D = $Onibus
 @onready var painel: PainelLateral = $Painel
 
@@ -17,10 +19,13 @@ func _ready() -> void:
 	if casa_inicial == null:
 		push_error("Defina a Casa Inicial no Inspector do tabuleiro!")
 		return
+	Aluno.fase = 2
+	Aluno.continuar_tempo()
 	atual = casa_inicial
 	onibus.global_position = atual.global_position
 	_sortear_desafios()
 	painel.mostrar_direcoes(instrucao_inicial)
+	Narrador.falar(AUDIO_INSTRUCAO)
 	$Painel/PainelFinal.continuar.connect(_ao_continuar)
 
 func _sortear_desafios() -> void:
@@ -66,10 +71,11 @@ func _bloqueado() -> void:
 
 func _chegou(casa: Casa) -> void:
 	if casa.eh_escola:
+		Aluno.pausar_tempo()   # chegou: o tempo da fase 2 para aqui
 		painel.mostrar_final()
 		print("Chegou na escola!")
 		return
-		
+
 	if casa.completada or casa.desafio.is_empty():
 		return
 
@@ -97,7 +103,9 @@ func _on_botao_direita_pressed() -> void:
 
 func _on_botao_esquerda_pressed() -> void:
 	_mover("esquerda")
-	
+
 func _ao_continuar() -> void:
-	print("Fim do jogo, continuar...")
-	# get_tree().change_scene_to_file("res://caminho_da_proxima_cena.tscn")
+	print("1 - _ao_continuar chamado")
+	Aluno.pausar_tempo()
+	print("2 - indo para a tela final")
+	Navegacao.irPara("res://cenas/telaFinal.tscn")

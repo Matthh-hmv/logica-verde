@@ -1,7 +1,7 @@
 extends Node2D
 class_name TabuleiroQuantidade
 
-@export_range(0, 2) var variante: int = 0   
+@export_range(0, 2) var variante: int = 0
 @export var linhas: int = 3
 
 const CARTA_OBJETO := preload("res://cenas/fase 1.3/carta_objetos.tscn")
@@ -9,7 +9,7 @@ const CARTA_NUMERO := preload("res://cenas/fase 1.3/carta_numeros.tscn")
 const POPUP := preload("res://cenas/pop_up.tscn")
 const PASTA_AUDIO := "res://Assets/Áudios/Fases/Fase 1.3 (Matheus)/"
 const AUDIO_INSTRUCAO := PASTA_AUDIO + "Nível 3, selecione a carta dos objetos.wav"
-
+@export var nivel: int = 3
 var popup: popUpBase
 @onready var anim: AnimationPlayer = $AnimationPlayer
 
@@ -27,8 +27,10 @@ var acertos: int = 0
 
 var comparaCarta: Timer
 var comparaDelay: float = 0.6
-	
+
 func _ready() -> void:
+	Aluno.fase = 1
+	Aluno.continuar_tempo()
 	if variante == 0:
 		variante = randi_range(1, 2)
 	popup = POPUP.instantiate()
@@ -137,18 +139,23 @@ func comparaTimeout() -> void:
 		acertos += 1
 		if acertos == linhas:
 			terminouNivel()
+			return   # a tela já vai trocar: não libera o clique
 	else:
 		a.deselecionar()
 		b.deselecionar()
-		var popup: popUpBase = POPUP.instantiate()
-		$CanvasLayer.add_child(popup)
-		await popup.erroPar(3)
-		popup.queue_free()
+		Aluno.errosFase1 += 1
+		Aluno.pausar_tempo()   # o tempo não conta enquanto o pop-up está aberto
+		var popupErro: popUpBase = POPUP.instantiate()
+		$CanvasLayer.add_child(popupErro)
+		await popupErro.erroPar(nivel)
+		popupErro.queue_free()
+		Aluno.continuar_tempo()
 
 	lockInput = false
 
 
 func terminouNivel() -> void:
+	Aluno.pausar_tempo()
 	await popup.finalizaMemoria(3)
-	Navegacao.irPara("res://cenas/fase 2/fase2.tscn")
-	pass
+	Aluno.fase = 2
+	Navegacao.irPara("res://cenas/telaTutorial.tscn")
