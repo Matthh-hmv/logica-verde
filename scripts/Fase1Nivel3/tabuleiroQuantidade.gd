@@ -149,5 +149,5 @@ func comparaTimeout() -> void:
 
 func terminouNivel() -> void:
 	await popup.finalizaMemoria(3)
-	# get_tree().change_scene_to_file("res://cenas/...tscn")
+	Navegacao.irPara("res://cenas/fase 2/fase2.tscn")
 	pass

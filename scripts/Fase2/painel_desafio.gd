@@ -51,7 +51,7 @@ func _perguntar(tela: Control, botoes: Array, certa: int, chances: int, msg_erra
 		await get_tree().create_timer(0.6).timeout
 
 		if chances > 0:
-			await _mensagem(tela, msg_errada, COR_MSG_ERRADA, false)
+			await _mensagem(tela, msg_errada, COR_MSG_ERRADA, true)
 			tela.get_node("Mensagem").hide()
 			tela.get_node("Opcoes").show()
 			for i in errados:   # as erradas continuam vermelhas e travadas

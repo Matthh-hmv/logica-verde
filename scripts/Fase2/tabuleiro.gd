@@ -11,6 +11,7 @@ extends Node2D
 
 var atual: Casa
 var movendo := false
+var fim := false
 
 func _ready() -> void:
 	if casa_inicial == null:
@@ -20,6 +21,7 @@ func _ready() -> void:
 	onibus.global_position = atual.global_position
 	_sortear_desafios()
 	painel.mostrar_direcoes(instrucao_inicial)
+	$Painel/PainelFinal.continuar.connect(_ao_continuar)
 
 func _sortear_desafios() -> void:
 	var azuis := []
@@ -41,7 +43,7 @@ func _sortear_desafios() -> void:
 		vermelhas[i].desafio = escolhas[i]
 
 func _mover(direcao: String) -> void:
-	if movendo:
+	if movendo or fim:
 		return
 	var destino: Casa = atual.vizinhas.get(direcao)
 	if destino == null:
@@ -64,9 +66,10 @@ func _bloqueado() -> void:
 
 func _chegou(casa: Casa) -> void:
 	if casa.eh_escola:
-		painel.executar_fim()
+		painel.mostrar_final()
 		print("Chegou na escola!")
 		return
+		
 	if casa.completada or casa.desafio.is_empty():
 		return
 
@@ -94,3 +97,7 @@ func _on_botao_direita_pressed() -> void:
 
 func _on_botao_esquerda_pressed() -> void:
 	_mover("esquerda")
+	
+func _ao_continuar() -> void:
+	print("Fim do jogo, continuar...")
+	# get_tree().change_scene_to_file("res://caminho_da_proxima_cena.tscn")
