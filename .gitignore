@@ -10,7 +10,6 @@ export/
 
 # Segredos (senha de email, chaves de API)
 .env
+secrets.cfg
 secrets.*
 *.local.cfg
-resendKey.gd
-resendKey.gd.uid

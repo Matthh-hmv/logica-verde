@@ -13,8 +13,9 @@ signal fechado
 
 enum Modo { RELATORIO, SAIR }
 
-# ============ AJUSTE AQUI ============
-const RESEND_API_KEY := ""   # cole aqui a chave da API do Resend
+# A chave da API do Resend fica em res://secrets.cfg (fora do git).
+# Modelo em secrets_exemplo.cfg: copie para "secrets.cfg" e cole sua chave.
+const ARQUIVO_SEGREDOS := "res://secrets.cfg"
 const REMETENTE := "Lógica Verde <onboarding@resend.dev>"
 const URL_API := "https://api.resend.com/emails"
 
@@ -192,8 +193,9 @@ func _enviar() -> void:
 
 	Aluno.emailProfessora = email   # fica guardado para os próximos envios
 
-	if RESEND_API_KEY == "":
-		_telaEmail("Envio não configurado: falta a chave da API no script popup_relatorio.gd.", email)
+	var chaveApi := _lerChaveApi()
+	if chaveApi == "":
+		_telaEmail("Envio não configurado: falta a chave da API no arquivo secrets.cfg.", email)
 		return
 
 	var bytes := FileAccess.get_file_as_bytes(RelatorioCSV.ARQUIVO)
@@ -216,7 +218,7 @@ func _enviar() -> void:
 	}
 	var cabecalhos := PackedStringArray([
 		"Content-Type: application/json",
-		"Authorization: Bearer " + RESEND_API_KEY,
+		"Authorization: Bearer " + chaveApi,
 	])
 
 	_ocupado = true
@@ -252,6 +254,14 @@ func _arquivar() -> void:
 	var t := Time.get_datetime_dict_from_system()
 	var novo := "%senviado_%04d%02d%02d_%02d%02d%02d.csv" % [RelatorioCSV.PASTA, t.year, t.month, t.day, t.hour, t.minute, t.second]
 	DirAccess.rename_absolute(RelatorioCSV.ARQUIVO, novo)
+
+
+func _lerChaveApi() -> String:
+	var cfg := ConfigFile.new()
+	if cfg.load(ARQUIVO_SEGREDOS) != OK:
+		push_warning("Resend: não achei %s (veja secrets_exemplo.cfg)" % ARQUIVO_SEGREDOS)
+		return ""
+	return str(cfg.get_value("resend", "api_key", "")).strip_edges()
 
 
 func _emailValido(email: String) -> bool:

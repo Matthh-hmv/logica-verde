@@ -231,7 +231,7 @@ position = Vector2(0, -10)
 
 [connection signal="pressed" from="Botao Direita" to="." method="_on_botao_direita_pressed"]
 [connection signal="pressed" from="Botao Esquerda" to="." method="_on_botao_esquerda_pressed"]
-[connection signal="pressed" from="Botao Cima" to="." method="_on_botao_cima_pressed"]
 [connection signal="pressed" from="Botao Cima" to="." method="_on_cima_pressed"]
+[connection signal="pressed" from="Botao Cima" to="." method="_on_botao_cima_pressed"]
 [connection signal="pressed" from="Botao Baixo" to="." method="_on_botao_baixo_pressed"]
 [connection signal="pressed" from="Painel/PainelFinal/Continuar" to="." method="_ao_continuar"]
