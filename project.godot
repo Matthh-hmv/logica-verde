@@ -20,6 +20,7 @@ config/icon="uid://cdsusrwgmwgko"
 Navegacao="*uid://wwx1wodji11t"
 Aluno="*uid://bw62qtq267p5a"
 Narrador="*uid://7xn3xs5cgted"
+Cursores="*res://scripts/cursores.gd"
 
 [display]
 

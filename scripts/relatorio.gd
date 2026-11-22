@@ -17,6 +17,10 @@ const QUEBRA := "\r\n"
 const CABECALHO := ["Aluno", "Data e hora", "Fase", "Tempo", "Erros",
 		"Comentário sobre o tempo", "Comentário sobre os erros"]
 
+# true quando algum aluno terminou o jogo desde que o jogo foi aberto.
+# Serve para só perguntar do relatório ao sair se alguém jogou nesta execução.
+static var registradoNestaSessao := false
+
 
 static func registrar(nome: String, tempoFase1: float, errosFase1: int,
 		tempoFase2: float, erroConta: int, erroObjeto: int) -> String:
@@ -49,6 +53,7 @@ static func registrar(nome: String, tempoFase1: float, errosFase1: int,
 
 	arquivo.store_string(QUEBRA.join(linhas) + QUEBRA)
 	arquivo.close()
+	registradoNestaSessao = true
 	return ARQUIVO
 
 

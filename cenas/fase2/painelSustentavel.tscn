@@ -1,0 +1,139 @@
+[gd_scene format=3 uid="uid://duoewodlv202d"]
+
+[ext_resource type="Script" uid="uid://cydtmwqvpopep" path="res://scripts/fase2/painelSustentavel.gd" id="1_jby47"]
+[ext_resource type="Texture2D" uid="uid://bnyigbu7wvf06" path="res://assets/fundosETelas/fase2/boardObjetos.png" id="2_fslty"]
+[ext_resource type="FontVariation" uid="uid://cp24mrk826eef" path="res://assets/fontes/testeFonte.tres" id="4_pfl6b"]
+
+[node name="PainelSustentavel" type="Control" unique_id=1778547074]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1293.0
+offset_top = 117.0
+offset_right = 1885.0
+offset_bottom = 951.0
+mouse_filter = 2
+script = ExtResource("1_jby47")
+
+[node name="Fundo" type="TextureRect" parent="." unique_id=371241115]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 5.0
+offset_right = 3.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_fslty")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Opcoes" type="HBoxContainer" parent="." unique_id=1670282542]
+clip_contents = true
+layout_mode = 0
+offset_left = 74.0
+offset_top = 374.0
+offset_right = 532.0
+offset_bottom = 659.0
+theme_override_constants/separation = 18
+
+[node name="Opcao0" type="Button" parent="Opcoes" unique_id=1036857926]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/h_separation = 2
+theme_override_constants/icon_max_width = 210
+theme_override_fonts/font = ExtResource("4_pfl6b")
+theme_override_font_sizes/font_size = 28
+flat = true
+autowrap_mode = 2
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+
+[node name="Conteudo" type="VBoxContainer" parent="Opcoes/Opcao0" unique_id=1015444236]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.020000001
+anchor_right = 1.0
+anchor_bottom = 1.028
+offset_left = -7.160001
+offset_top = -3.0
+offset_right = 5.0000153
+offset_bottom = 8.019989
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/separation = 1
+alignment = 1
+
+[node name="Imagem" type="TextureRect" parent="Opcoes/Opcao0/Conteudo" unique_id=109661382]
+custom_minimum_size = Vector2(0, 170)
+layout_mode = 2
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Nome" type="Label" parent="Opcoes/Opcao0/Conteudo" unique_id=1569133531]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_pfl6b")
+theme_override_font_sizes/font_size = 22
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Opcao1" type="Button" parent="Opcoes" unique_id=1979688126]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/h_separation = 2
+theme_override_constants/icon_max_width = 210
+theme_override_fonts/font = ExtResource("4_pfl6b")
+theme_override_font_sizes/font_size = 28
+flat = true
+autowrap_mode = 2
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+
+[node name="Conteudo" type="VBoxContainer" parent="Opcoes/Opcao1" unique_id=783821681]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.020000001
+anchor_top = 0.018000001
+anchor_right = 0.99500006
+anchor_bottom = 1.028
+offset_left = -8.160001
+offset_top = -5.13
+offset_right = 8.100006
+offset_bottom = 0.019989014
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/separation = 1
+alignment = 1
+
+[node name="Imagem" type="TextureRect" parent="Opcoes/Opcao1/Conteudo" unique_id=2111843552]
+custom_minimum_size = Vector2(0, 170)
+layout_mode = 2
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Nome" type="Label" parent="Opcoes/Opcao1/Conteudo" unique_id=1051356849]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_pfl6b")
+theme_override_font_sizes/font_size = 22
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Mensagem" type="Button" parent="." unique_id=947673451]
+layout_mode = 0
+offset_left = 71.0
+offset_top = 372.0
+offset_right = 538.0
+offset_bottom = 673.0
+theme_override_fonts/font = ExtResource("4_pfl6b")
+theme_override_font_sizes/font_size = 28
+flat = true

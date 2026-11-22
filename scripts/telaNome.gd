@@ -1,7 +1,7 @@
 extends Node2D
 
-const AUDIO_NOME := "res://Assets/Áudios/Digite seu nome.wav"
-const AUDIO_CONTINUAR := "res://Assets/Áudios/Tela inicial/Começar.wav"
+const AUDIO_NOME := "res://assets/audios/digiteSeuNome.wav"
+const AUDIO_CONTINUAR := "res://assets/audios/telaInicial/comecar.wav"
 
 @onready var campoNome: LineEdit = %CampoNome
 @onready var botaoComecar: TextureButton = $BotaoComecar

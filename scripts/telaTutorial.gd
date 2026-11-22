@@ -1,25 +1,25 @@
 extends Node2D
 #COLOCAR VIDEO FASE 2
 const VIDEOS := {
-	1: "res://Assets/Vídeos/Tutorial Fase 1.ogv",
-	2: "res://Assets/Vídeos/tutorial fase 2.ogv",   # <- confira o nome do arquivo
+	1: "res://assets/videos/tutorialFase1.ogv",
+	2: "res://assets/videos/tutorialFase2.ogv",   # <- confira o nome do arquivo
 }
 const PROXIMAS_CENAS := {
-	1: "res://cenas/fase 1.1 e 1.2/fase_1_1.tscn",
-	2: "res://cenas/fase 2/fase2.tscn",
+	1: "res://cenas/fase1Nivel1e2/fase1Nivel1.tscn",
+	2: "res://cenas/fase2/fase2.tscn",
 }
 
 # true = no tutorial da fase 2 o botão Voltar é removido (voltaria para a fase 1 já concluída)
 const REMOVER_VOLTAR_NA_FASE_2 := true
 
-const FUNDO := "res://Assets/Fundos e telas/Fundo fases.png"
-const FONTE := "res://Assets/Fontes/Minecraft.ttf"
+const FUNDO := "res://assets/fundosETelas/fundoFases.png"
+const FONTE := "res://assets/fontes/minecraft.ttf"
 
 # true = o botão Continuar só libera quando o vídeo terminar
 const EXIGIR_VIDEO_ATE_O_FIM := false
 
-const AUDIO_CONTINUAR := "res://Assets/Áudios/Continuar.wav"
-const AUDIO_REVER := "res://Assets/Áudios/Rever o video.wav"
+const AUDIO_CONTINUAR := "res://assets/audios/continuar.wav"
+const AUDIO_REVER := "res://assets/audios/reverOVideo.wav"
 const AUDIO_PAUSAR := ""    # "Pausar vídeo"
 const AUDIO_RETOMAR := ""   # "Continuar vídeo"
 # =====================================

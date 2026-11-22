@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dn72yp52kua5m"]
 
 [ext_resource type="Script" uid="uid://dhldjoiyxyp0g" path="res://scripts/telaTutorial.gd" id="1_sb82e"]
-[ext_resource type="PackedScene" uid="uid://clvjscry2leiy" path="res://cenas/Navegacao.tscn" id="2_3twot"]
+[ext_resource type="PackedScene" uid="uid://clvjscry2leiy" path="res://cenas/navegacao.tscn" id="2_3twot"]
 
 [node name="TelaTutorial" type="Node2D" unique_id=237029456]
 script = ExtResource("1_sb82e")
