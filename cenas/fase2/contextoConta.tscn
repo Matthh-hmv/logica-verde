@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://5c405hrv5pxs"]
 
-[ext_resource type="Texture2D" uid="uid://dwm7dmg0b1m38" path="res://assets/fundosETelas/fase2/boardContexto.png" id="1_wlqud"]
+[ext_resource type="Texture2D" uid="uid://dnxtxhs8atb4e" path="res://assets/fundosETelas/fase2/boardContexto.png" id="1_wlqud"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wlqud"]
 load_path = "res://.godot/imported/Fase 2.1 - contexto.png-e4213a852731cd77655f102001608144.ctex"
